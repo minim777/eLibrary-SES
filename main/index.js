@@ -10,3 +10,7 @@ const path = require('path');
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 });
+
+function hello() {
+    alert('hello');
+}
