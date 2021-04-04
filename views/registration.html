@@ -13,19 +13,19 @@
         <div id="header">
             <h1>eLibrary Registration</h1>
         </div>
-        <form>
+        <form action="/register" method="POST">
             <div id="loginContainer">
-                <label>Staff/Student ID:</label>
-                <input placeholder="UTS Staff/Student ID"/>
+                <label for="userId">Staff/Student ID:</label>
+                <input type="text" name="userId" placeholder="UTS Staff/Student ID"/>
                 <br />
-                <label>Password:</label>
-                <input placeholder="Password"/>
+                <label for="password">Password:</label>
+                <input type="text" name="password" placeholder="Password"/>
                 <br />
-                <label>Email:</label>
-                <input placeholder="Email"/>
+                <label for="email">Email:</label>
+                <input type="email" name="email" placeholder="Email"/>
                 <br />
                 <div id="buttonContainer">
-                    <button type="submit">Create Account</button>
+                    <input type="submit" value="Create Account"/>
                 </div>
             </div>
         </form>
