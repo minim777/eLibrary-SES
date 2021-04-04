@@ -42,7 +42,7 @@ form {
     display: flex;
     flex-direction: column;
     width: 25%;
-    height: 600px;
+    height: 400px;
     text-align: left;
     background: rgb(238,174,202);
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
