@@ -6,7 +6,9 @@ const app = express();
 app.set('view engine', 'ejs'); 
 
 // connecting to mongodb database: Books
-mongoose.connect("mongodb+srv://leo:calligraphy004@ses1a.kdj8l.mongodb.net/Books?retryWrites=true&w=majority", { useNewUrlParser: true }, { useUnifiedTopology: true }); 
+mongoose.connect('mongodb+srv://leo:calligraphy004@ses1a.kdj8l.mongodb.net/Books?retryWrites=true&w=majority', { useNewUrlParser: true }, { useUnifiedTopology: true });
+
+
 
 // creating a book schema
 const bookSchema = {
