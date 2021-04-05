@@ -12,17 +12,17 @@
         <div id="header">
             <h1>eLibrary Login</h1>
         </div>
-        <form>
+        <form action="/login" method="POST">
             <div id="loginContainer">
-                <label>Staff/Student ID:</label>
-                <input placeholder="UTS Staff/Student ID"/>
+                <label for="userId">Staff/Student ID:</label>
+                <input type="text" name="userId" placeholder="UTS Staff/Student ID" required/>
                 <br />
-                <label>Password:</label>
-                <input placeholder="Password"/>
+                <label for="password">Password:</label>
+                <input type="text" name="password" placeholder="Password" required/>
                 <br />
                 <div id="buttonContainer">
                     <button>Forgot Password?</button>
-                    <button type="submit">Login</button>
+                    <input type="submit" value="Login"></input>
                 </div>
                 <a href="/registration">Click here if you don't have an account!</a>
             </div>
