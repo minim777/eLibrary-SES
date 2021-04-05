@@ -8,7 +8,7 @@ app.set('view engine', 'ejs');
 mongoose.connect('mongodb+srv://leo:calligraphy004@ses1a.kdj8l.mongodb.net/Books?retryWrites=true&w=majority'); 
 
 app.get('/', (req,res) => {
-    res.sendFile('/BrowseBooks.html')
+    res.render(BrowseBooks.ejs)
 })
 
 app.listen(4000, function() {
