@@ -16,7 +16,7 @@ const bookSchema = {
     type: String
 }
 
-// creating model
+// creating data model
 const Book = mongoose.model('Book', bookSchema); 
 
 app.get('/', (req,res) => {
