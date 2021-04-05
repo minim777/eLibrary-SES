@@ -4,23 +4,23 @@
         <title>
             eLibrary Management System: Browse All Books
         </title>
-        <link rel="stylesheet" href="BrowseBooks.css">
+        <link href= "BrowseBooks.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
         <div id="tint">
             <div id="header">
                 <h1>
-                    Browse All Books
+                    Browse All BooksS
                 </h1>
             </div>
             <!--Making search options-->
             <div id="subheader">
                 <div id="searchoptions" >
                     <select id="searchby" name="filter">
-                        <option selectDisabled>Select Filter....</option>
+                        <option selectDisabled>Select Filter</option>
                         <option name="Title">Title </option>
                         <option name="Author">Author </option>
-                        <option name="Genre">Genre </option>
+                        <option name="Genre">Category </option>
                         <option name="Alphabetical">Alphabetical </option>
                     </select>
                     <input name="searchbar" type="text" placeholder="Search Books">
@@ -29,6 +29,22 @@
             </div>
             <div id="booklist">
                 <!-- Add list using JS at a later stage -->
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
             </div>
 
             <footer>

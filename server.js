@@ -7,8 +7,21 @@ app.set('view engine', 'ejs');
 
 mongoose.connect('mongodb+srv://leo:calligraphy004@ses1a.kdj8l.mongodb.net/Books?retryWrites=true&w=majority'); 
 
+const bookSchema = {
+    title: String, 
+    author: String, 
+    category: String, 
+    type: String
+}
+
+const Book = mongoose.model('Book', bookSchema); 
+
 app.get('/', (req,res) => {
-    res.render(BrowseBooks.ejs)
+    Book.find({}, function(err, Books) {
+        res.render('BrowseBooks', {
+            BooksList: Books
+        })
+    })
 })
 
 app.listen(4000, function() {
