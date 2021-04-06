@@ -104,6 +104,8 @@ table.purpleHorizon {
   align-self: center;
   margin: auto;
   margin-top: 20px;
+  margin-bottom: 10px;
+  border-radius: 7px;
 }
 table.purpleHorizon td,
 table.purpleHorizon th {
