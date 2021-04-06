@@ -6,6 +6,7 @@ const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
 
 app.set('view engine', 'ejs'); 
+app.use(express.static('public')); 
 
 // connecting to mongodb database: Books
 //mongoose.connect('mongodb+srv://leo:calligraphy004@ses1a.kdj8l.mongodb.net/Books?retryWrites=true&w=majority', { useNewUrlParser: true }, { useUnifiedTopology: true }); 

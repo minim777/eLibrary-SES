@@ -1,62 +1,73 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            eLibrary Management System: Browse All Books
-        </title>
-        <link href="BrowseBooks.css" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    </head>
-    <body>
-        <div id="tint">
-            <div id="header">
-                <h1>
-                    Browse All Books
-                </h1>
-            </div>
-            <!--Making search options-->
-            <div id="subheader">
-                <div id="searchoptions" >
-                    <select id="searchby" name="filter">
-                        <option selectDisabled>Select Filter</option>
-                        <option name="Title">Title </option>
-                        <option name="Author">Author </option>
-                        <option name="Genre">Category </option>
-                        <option name="Alphabetical">Alphabetical </option>
-                    </select>
-                    <input name="searchbar" type="text" placeholder="Search Books">
-                    <input name="searchbutton" type="submit" value="Search">
-                </div>
-            </div>
-            <div id="booklist">
-                <!-- Add list using JS at a later stage -->
-                <table class="table">
-                    <thead>
-                      <tr>
-                        <th scope="col">Title</th>
-                        <th scope="col">Author</th>
-                        <th scope="col">Category</th>
-                        <th scope="col">Type</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                        <% Books.forEach(Book => { %> 
-                            <tr>
-                                <th scope="row"><%= Book.title %></th>
-                                <td><%= Book.author %></td>
-                                <td><%= Book.category %></td>
-                                <td>@<%= Book.type %></td>
-                              </tr>
-                        <% }) %>
-
-                    </tbody>
-                </table>
-            </div>
-
-            <footer>
-                <p>© SES Group 3</p>
-                <a href="#">Contact Us</a>
-            </footer>
+  <head>
+    <title>eLibrary Management System: Browse All Books</title>
+    <link rel="stylesheet" href="BrowseBooks.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div id="tint">
+      <div id="header">
+        <h1>Browse All Books</h1>
+      </div>
+      <!--Making search options-->
+      <div id="subheader">
+        <div id="searchoptions">
+          <select id="searchby" name="filter">
+            <option selectDisabled>Select Filter</option>
+            <option name="Title">Title</option>
+            <option name="Author">Author</option>
+            <option name="Genre">Category</option>
+            <!--<option name="Alphabetical">Alphabetical </option> -->
+          </select>
+          <input name="searchbar" type="text" placeholder="Search Books" />
+          <input name="searchbutton" type="submit" value="Search" />
         </div>
-    </body>
+      </div>
+      <div id="booklist">
+        <!-- Add list using JS at a later stage -->
+        <table class="purpleHorizon">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Category</th>
+              <th>Type</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <td colspan="4">
+                <div class="links">
+                  <a href="#">&laquo;</a> <a class="active" href="#">1</a>
+                  <a href="#">2</a> <a href="#">3</a> <a href="#">4</a>
+                  <a href="#">&raquo;</a>
+                </div>
+              </td>
+            </tr>
+          </tfoot>
+          <tbody>
+            <% Books.forEach(Book => { %> 
+                <tr>
+                    <td><%= Book.title %></td>
+                    <td><%= Book.author %></td>
+                    <td><%= Book.category %></td>
+                    <td>@<%= Book.type %></td>
+                  </tr>
+            <% }) %>
+        </tbody>
+        </table>
+      </div>
+
+      <footer>
+        <p>© SES Group 3</p>
+        <a href="#">Contact Us</a>
+      </footer>
+    </div>
+  </body>
 </html>
