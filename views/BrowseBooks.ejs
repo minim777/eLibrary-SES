@@ -40,7 +40,7 @@
                       </tr>
                     </thead>
                     <tbody>
-                        <% BooksList.forEach(Book => { %>
+                        <% Books.forEach(Book => { %> 
                             <tr>
                                 <th scope="row"><%= Book.title %></th>
                                 <td><%= Book.author %></td>
@@ -48,6 +48,7 @@
                                 <td>@<%= Book.type %></td>
                               </tr>
                         <% }) %>
+
                     </tbody>
                 </table>
             </div>
