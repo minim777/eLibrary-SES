@@ -66,6 +66,7 @@ body {
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 7px;
+  background-color: white;
 }
 
 input[id="myInput"] {
@@ -80,6 +81,7 @@ input[id="myInput"] {
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 7px;
+  background-color: white;
 }
 
 input[id="searchbutton"] {
@@ -94,89 +96,49 @@ input[id="searchbutton"] {
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 7px;
+  background-color: white;
+  
 }
 
-/* table.purpleHorizon {
-  border: 4px solid #000000;
-  background-color: #ffffff;
-  width: 950px;
-  text-align: center;
-  align-self: center;
+#myTable {
+  border-collapse: collapse; /*Collapse borders */
+  width: 950px; /* Full-width */
+  border: 3px solid rgb(0, 0, 0); /* Add a grey border */
+  font-size: 18px; /* Increase font-size */
+  background-color: rgba(255, 255, 255, 0.925);
   margin: auto;
   margin-top: 20px;
+  align-self: center;
+  border-radius: 7px;
+  overflow: auto;
 }
-table.purpleHorizon td,
-table.purpleHorizon th {
-  border: 2px solid #555555;
-  padding: 8px 4px;
+
+#myTable th,
+#myTable td {
+  text-align: center; /* Left-align text */
+  padding: 15px; /* Add padding */
+
 }
-table.purpleHorizon tbody td {
-  font-size: 14px;
-  color: #000000;
-}
-table.purpleHorizon thead {
-    background: radial-gradient(
-        circle,
-        rgba(238, 174, 202, 1) 0%,
-        rgba(148, 187, 233, 1) 100%
-      );
-}
-table.purpleHorizon thead th {
-  font-size: 19px;
-  font-weight: bold;
-  color: #000000;
-  text-align: center;
-}
-table.purpleHorizon tfoot {
-  font-size: 13px;
-  font-weight: normal;
-  color: #ffffff;
+
+#myTable th {
   background: radial-gradient(
     circle,
     rgba(238, 174, 202, 1) 0%,
     rgba(148, 187, 233, 1) 100%
   );
 }
-table.purpleHorizon tfoot td {
-  font-size: 13px;
-}
-table.purpleHorizon tfoot .links {
-  text-align: right;
-}
-table.purpleHorizon tfoot .links a {
-  display: inline-block;
-  background: #000000;
-  color: #ffffff;
-  padding: 2px 8px;
-  border-radius: 5px;
-} */
-
-#myTable {
-  border-collapse: collapse; /* Collapse borders */
-  width: 950px; /* Full-width */
-  border: 1px solid #ddd; /* Add a grey border */
-  font-size: 18px; /* Increase font-size */
-  background-color: #f1f1f1;
-  margin:auto;
-  margin-top: 20px;
-  align-self: center;
-}
-
-#myTable th, #myTable td {
-  text-align: left; /* Left-align text */
-  padding: 12px; /* Add padding */
-}
 
 #myTable tr {
   /* Add a bottom border to all table rows */
+  border: 2px solid rgb(0, 0, 0); 
   border-bottom: 1px solid #ddd;
 }
 
-#myTable tr.header, #myTable tr:hover {
+#myTable tr.header,
+#myTable tr:hover {
   /* Add a grey background color to the table header and on hover */
-  background-color: #f1f1f1;
+  background-color:white;
 }
-
 
 footer {
   position: fixed;

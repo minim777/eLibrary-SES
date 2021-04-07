@@ -26,8 +26,8 @@
             <option id="Type">Type</option>
             <!--<option name="Alphabetical">Alphabetical </option> -->
           </select>
-                <input id="myInput" type="text"  onkeyup = myFunction(); placeholder="Search Books..." />
-                <!-- <input id="searchbutton" type="submit" value="Search" />    -->
+                <input id="myInput" type="text" placeholder="Search Books..." />
+                <input id="searchbutton" type="submit" value="Search" onclick = "myFunction();" /> 
         </div>
       </div>
       <div id="booklist">
@@ -62,9 +62,10 @@
             filter = input.value.toUpperCase();
             table = document.getElementById("myTable");
             tr = table.getElementsByTagName("tr");
-            dropnum = document.getElementById("searchby").selectedIndex - 1; 
+            dropnum = document.getElementById("searchby").selectedIndex - 1;
 
-            
+
+
 
             // Loop through all table rows, and hide those who don't match the search query
             for (i = 0; i < tr.length; i++) {
