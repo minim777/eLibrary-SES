@@ -26,16 +26,16 @@
             <option id="Type">Type</option>
             <!--<option name="Alphabetical">Alphabetical </option> -->
           </select>
-                <input id="myInput" type="text" placeholder="Search Books..." />
-                <input id="searchbutton" type="submit" value="Search" onclick = "myFunction();" /> 
+                <input id="searchInput" type="text" placeholder="Search Books..." />
+                <input id="searchbutton" type="submit" value="Search" onclick = "searchCommand();" /> 
         </div>
       </div>
       <div id="booklist">
         
-        <!-- Add list using JS at a later stage -->
+        <!-- Add list using JS and HTML at a later stage -->
 
           
-        <table id="myTable">
+        <table id="bookTable">
           <tr class="header">
             <th style="width:40%;">Title</th>
             <th style="width:20%;">Author</th>
@@ -55,12 +55,12 @@
 
 
         <script>
-          function myFunction() {
+          function searchCommand() {
             // Declare variables
             var input, filter, table, tr, td, i, txtValue, dropnum;
-            input = document.getElementById("myInput");
+            input = document.getElementById("searchInput");
             filter = input.value.toUpperCase();
-            table = document.getElementById("myTable");
+            table = document.getElementById("bookTable");
             tr = table.getElementsByTagName("tr");
             dropnum = document.getElementById("searchby").selectedIndex - 1;
 

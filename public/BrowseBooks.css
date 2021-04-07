@@ -69,7 +69,7 @@ body {
   background-color: white;
 }
 
-input[id="myInput"] {
+input[id="searchInput"] {
   margin: auto;
   align-self: center;
   grid-area: bar;
@@ -100,7 +100,7 @@ input[id="searchbutton"] {
   
 }
 
-#myTable {
+#bookTable {
   border-collapse: collapse; /*Collapse borders */
   width: 950px; /* Full-width */
   border: 3px solid rgb(0, 0, 0); /* Add a grey border */
@@ -113,14 +113,14 @@ input[id="searchbutton"] {
   overflow: auto;
 }
 
-#myTable th,
-#myTable td {
+#bookTable th,
+#bookTable td {
   text-align: center; /* Left-align text */
   padding: 15px; /* Add padding */
 
 }
 
-#myTable th {
+#bookTable th {
   background: radial-gradient(
     circle,
     rgba(238, 174, 202, 1) 0%,
@@ -128,14 +128,14 @@ input[id="searchbutton"] {
   );
 }
 
-#myTable tr {
+#bookTable tr {
   /* Add a bottom border to all table rows */
   border: 2px solid rgb(0, 0, 0); 
   border-bottom: 1px solid #ddd;
 }
 
-#myTable tr.header,
-#myTable tr:hover {
+#bookTable tr.header,
+#bookTable tr:hover {
   /* Add a grey background color to the table header and on hover */
   background-color:white;
 }
