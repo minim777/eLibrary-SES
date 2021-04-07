@@ -30,7 +30,7 @@ body {
 
 #subheader {
   width: 100%;
-  height: 70px;
+  height: 200px;
   display: grid;
   grid-template-columns: 1fr 950px 1fr;
   grid-template-rows: 1fr;
@@ -88,7 +88,7 @@ input[id="searchbutton"] {
   margin: auto;
   align-self: center;
   grid-area: button;
-  width: 95%;
+  width: 25%;
   padding-top: 10px;
   padding-bottom: 10px;
   font-size: large;
@@ -138,6 +138,14 @@ input[id="searchbutton"] {
 #bookTable tr:hover {
   /* Add a grey background color to the table header and on hover */
   background-color:white;
+} 
+
+#labels {
+color: black;
+font-size: larger; 
+justify-content: center; 
+text-align: center; 
+font-style: bold;
 }
 
 footer {
