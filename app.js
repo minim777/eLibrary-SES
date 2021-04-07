@@ -5,6 +5,7 @@ const ejs = require('ejs');
 const app = express(); 
 const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
+const port = 4000; 
 
 // Setting the view engine to ejs
 app.set('view engine', 'ejs'); 
@@ -24,10 +25,10 @@ const client = new MongoClient(url);
 // Then set up the actual server.
 client.connect(function(err) {
   assert.equal(null, err);
-  console.log("Connected successfully to db");
+  console.log("Connected successfully to eLMS Database");
 
-  app.listen(4000, function() {
-    console.log('Server is running !');
+  app.listen(port, function() {
+    console.log('Server is running at localhost:' + port + '!');
     setTimeout( () => {
         console.log(mongoose.connection.readyState); // prints 1
       }, 2000);
