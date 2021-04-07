@@ -68,7 +68,7 @@ body {
   border-radius: 7px;
 }
 
-input[name="searchbar"] {
+input[id="myInput"] {
   margin: auto;
   align-self: center;
   grid-area: bar;
@@ -82,7 +82,7 @@ input[name="searchbar"] {
   border-radius: 7px;
 }
 
-input[name="searchbutton"] {
+input[id="searchbutton"] {
   margin: auto;
   align-self: center;
   grid-area: button;
@@ -96,7 +96,7 @@ input[name="searchbutton"] {
   border-radius: 7px;
 }
 
-table.purpleHorizon {
+/* table.purpleHorizon {
   border: 4px solid #000000;
   background-color: #ffffff;
   width: 950px;
@@ -149,7 +149,34 @@ table.purpleHorizon tfoot .links a {
   color: #ffffff;
   padding: 2px 8px;
   border-radius: 5px;
+} */
+
+#myTable {
+  border-collapse: collapse; /* Collapse borders */
+  width: 950px; /* Full-width */
+  border: 1px solid #ddd; /* Add a grey border */
+  font-size: 18px; /* Increase font-size */
+  background-color: #f1f1f1;
+  margin:auto;
+  margin-top: 20px;
+  align-self: center;
 }
+
+#myTable th, #myTable td {
+  text-align: left; /* Left-align text */
+  padding: 12px; /* Add padding */
+}
+
+#myTable tr {
+  /* Add a bottom border to all table rows */
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  /* Add a grey background color to the table header and on hover */
+  background-color: #f1f1f1;
+}
+
 
 footer {
   position: fixed;
