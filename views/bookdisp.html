@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>eLibrary Management System</title>
+        <link rel="stylesheet" type="text/css" href="views/loginStyle.css">
+        <script src="../main/borrow.js" charset="utf-8"></script>
+        <script>
+            function borrowBook(title) {
+                try {
+                    const database = client.db('eLMS');
+                    const books = database.collection('Books');
+                    document.getElementById("p1").innerText = "swag";
+                    const query = { title: title };
+                    const book = await books.find(query);
+                    document.getElementById("p1").innerHTML = book;
+                }
+                catch(e) {
+                    console.error(e);
+    }
+}
+        </script>
+    </head>
+
+    <body>
+        <div id="tint">
+        <div id="header">
+            <h1>Borrow a book</h1>
+        </div>
+        <form action="/borrow" method="POST">
+            <div id="borrowContainer">
+                <label for="title">Book title:</label>
+                <input id="input" type="text" name="title" placeholder="Book title" required/>
+                <br />
+                <button id="borrowBtn">Borrow</button>
+                <script>
+                    document.getElementById("borrowBtn").addEventListener('click', function() {
+                        borrowBook(document.getElementById("input").innerHTML);
+
+                    })
+                </script>
+                <br />
+                <p id="p1">placeholders</p>
+                <br />
+            </div>
+        </form>
+        <footer>
+            <p>© SES Group 3</p>
+            <a href="#">Contact Us</a>
+        </footer>
+        </div>
+    </body>
+</html>

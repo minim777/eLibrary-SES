@@ -1,5 +1,6 @@
 const express = require('express');
 const http = require('http');
+const fs = require('fs');
 const mongoose = require('mongoose');
 const app = express();
 const path = require('path');
@@ -13,6 +14,10 @@ router.get('/',function(req,res){
   res.sendFile(path.join(__dirname+'/views/landingpagePlaceholder.html'));
 });
 
+router.get('/borrow',function(req,res){
+  res.sendFile(path.join(__dirname+'/views/bookdisp.html'));
+});
+
 router.get('/login',function(req,res){
   res.sendFile(path.join(__dirname+'/views/login.html'));
 });
@@ -21,7 +26,6 @@ router.get('/registration',function(req,res){
   res.sendFile(path.join(__dirname+'/views/registration.html'));
 });
 
-//I dont even know what this shit does
 app.use('/', router);
 app.listen(process.env.port || 3000);
 var bodyParser = require('body-parser');
