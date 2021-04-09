@@ -5,7 +5,8 @@ var schema = new mongoose.Schema({
     title: String, 
     author: String, 
     category: String, 
-    type: String
+    type: String,
+    borrowed: Boolean 
 }); 
 
 

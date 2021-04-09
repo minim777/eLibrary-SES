@@ -36,6 +36,21 @@ client.connect(function(err) {
 
 });
 
+
+//creating a book schema
+var schema = new mongoose.Schema({
+    title: String, 
+    author: String, 
+    category: String, 
+    type: String,
+    borrowed: Boolean
+}); 
+
+
+
+//creating data model
+const Book = mongoose.model('Book', schema);
+
 // Selecting the database and the right collection, taking all of the data in it and putting it into a list
 app.get('/', (req,res) => {
 
