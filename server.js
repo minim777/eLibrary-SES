@@ -1,4 +1,4 @@
-// Importing important modules
+
 const express = require('express'); 
 const mongoose = require('mongoose'); 
 const ejs = require('ejs'); 
@@ -12,13 +12,10 @@ app.set('view engine', 'ejs');
 app.use(express.static('public')); 
 
 
-// Connection URL
-const url = 'mongodb+srv://leo:calligraphy004@ses1a.kdj8l.mongodb.net/Books?retryWrites=true&w=majority';
+const url = 'mongodb+srv://Huzaifa:Disable321#$@ses1a.kdj8l.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 
-// Database Name
 const dbName = 'eLMS';
 
-// Create a new MongoClient
 const client = new MongoClient(url);
 
 // Use connect method to connect to the Server --> Make sure that the Database 
@@ -41,7 +38,6 @@ app.get('/', (req,res) => {
 
     const db = client.db(dbName);
     const collection = db.collection('Books');
-    // Find some documents
     collection.find({}).toArray(function(err, books_list) {
         assert.equal(err, null);
         console.log("Found the following books");
