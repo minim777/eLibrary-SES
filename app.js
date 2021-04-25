@@ -1,17 +1,15 @@
-// Importing important modules
 const express = require('express'); 
 const mongoose = require('mongoose'); 
 const ejs = require('ejs'); 
 const app = express(); 
 const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
-const bodyParse = require("body-parser"); 
-const port = 4000; 
+const bodyParser = require("body-parser"); 
+const port = 2000;
 
-// Setting the view engine to ejs
 app.set('view engine', 'ejs'); 
 app.use(express.static('public')); 
-
+app.use(bodyParser.urlencoded({extended: true})); 
 
 // Connection URL
 const url = 'mongodb+srv://leo:calligraphy004@ses1a.kdj8l.mongodb.net/Books?retryWrites=true&w=majority';
@@ -52,7 +50,6 @@ var schema = new mongoose.Schema({
 //creating data model
 const Book = mongoose.model('Book', schema);
 
-// Selecting the database and the right collection, taking all of the data in it and putting it into a list
 app.get('/', (req,res) => {
 
     const db = client.db(dbName);
@@ -62,10 +59,24 @@ app.get('/', (req,res) => {
         assert.equal(err, null);
         console.log("Found the following books");
         console.log(books_list)
-        res.render('BrowseBooks', {Books: books_list})
+        res.render('AddBook', {Books: books_list})
      });
 })
 
+app.post('/', function(req,res) {
+    var newBook = new Book ( {
+        title: req.body.title , 
+        author: req.body.author ,
+        category: req.body.category, 
+        type: req.body.type 
+    });
+    
+    const db = client.db(dbName);
+    const collection = db.collection('Books');
+    collection.insertOne(newBook, function(err, result) {
+        assert.equal(null, err); 
+        console.log('Book Inserted')
+    })
 
-
-
+    res.redirect('/'); 
+})
