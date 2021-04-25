@@ -29,9 +29,9 @@ client.connect(function(err) {
 
   app.listen(port, function() {
     console.log('Server is running at localhost:' + port + '!');
-    setTimeout( () => {
-        console.log(mongoose.connection.readyState); // prints 1
-      }, 2000);
+    // setTimeout( () => {
+    //     console.log(mongoose.connection.readyState); // prints 1
+    //   }, 2000);
 }); 
 
 });
