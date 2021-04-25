@@ -1,15 +1,18 @@
 const express = require('express'); 
 const mongoose = require('mongoose'); 
 const ejs = require('ejs'); 
-const app = express(); 
+const app = express();
+const router = express.Router(); 
 const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
 const bodyParser = require("body-parser"); 
+const { Router } = require('express');
 const port = 2000;
 
 app.set('view engine', 'ejs'); 
 app.use(express.static('public')); 
 app.use(bodyParser.urlencoded({extended: true})); 
+app.use(bodyParser.json());
 
 // Connection URL
 const url = 'mongodb+srv://leo:calligraphy004@ses1a.kdj8l.mongodb.net/Books?retryWrites=true&w=majority';
@@ -50,7 +53,7 @@ var schema = new mongoose.Schema({
 //creating data model
 const Book = mongoose.model('Book', schema);
 
-app.get('/', (req,res) => {
+app.get('/', (req,res, next) => {
 
     const db = client.db(dbName);
     const collection = db.collection('Books');
@@ -59,24 +62,21 @@ app.get('/', (req,res) => {
         assert.equal(err, null);
         console.log("Found the following books");
         console.log(books_list)
-        res.render('AddBook', {Books: books_list})
+        res.render('RemoveBook', {Books: books_list})
      });
 })
 
-app.post('/', function(req,res) {
-    var newBook = new Book ( {
-        title: req.body.title , 
-        author: req.body.author ,
-        category: req.body.category, 
-        type: req.body.type 
-    });
-    
+
+app.post('/', function(req, res, next) {
+    var title = req.body.remove_Title
+
     const db = client.db(dbName);
     const collection = db.collection('Books');
-    collection.insertOne(newBook, function(err, result) {
+    collection.deleteOne({"title" : title}, function(err, result) {
         assert.equal(null, err); 
-        console.log('Book Inserted')
-    })
-
+        console.log('Book deleted');
+    }) 
     res.redirect('/'); 
 })
+
+
