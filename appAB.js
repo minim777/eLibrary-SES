@@ -57,7 +57,6 @@ app.get('/', (req,res, next) => {
 
     const db = client.db(dbName);
     const collection = db.collection('Books');
-    // Find some documents
     collection.find({}).toArray(function(err, books_list) {
         assert.equal(err, null);
         console.log("Found the following books");
