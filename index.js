@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const app = express();
 const path = require('path');
 const router = express.Router();
+const nodemailer = require('nodemailer');
 
 //This is to make css work for the views i think?! idk this app is so fragile nobody touch anything!
 app.use('/views',express.static(__dirname +'/views'));
@@ -54,6 +55,21 @@ var user = mongoose.model('Users', userSchema);
 app.post('/register', async (req, res) => {
 	const { userId, password, email } = req.body
 
+  var transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'sesgroup3elib@gmail.com',
+      pass: '!1oogabooga'
+    }
+  });
+
+  var mailOptions = {
+    from: 'sesgroup3elib@gmail.com',
+    to: email,
+    subject: 'eLibrary Confirmation Email',
+    text: 'Thank you for signing up to the eLibrary Management System!'
+  }
+
 	if (password.length < 5) {
 		return res.json({
 			status: 'error',
@@ -68,6 +84,13 @@ app.post('/register', async (req, res) => {
       email
 		})
 		console.log('User created successfully: ', response)
+    transporter.sendMail(mailOptions, function(error, info){
+      if (error) {
+        console.log(error);
+      } else {
+        console.log('Email sent: ' + info);
+      }
+    });
 	} catch (error) {
 		if (error.code === 11000) {
 			// duplicate key
@@ -79,12 +102,13 @@ app.post('/register', async (req, res) => {
 })
 
 app.post("/login", (req, res) => {
+	const { userId, password } = req.body
   var MongoClient = require('mongodb').MongoClient;
   var url = 'mongodb+srv://leo:calligraphy004@ses1a.kdj8l.mongodb.net/eLMS';
   MongoClient.connect(url, function(err, db) {
     if (err) throw err;
     var dbo = db.db("eLMS");
-    dbo.collection("users").findOne({}, function(err, result) {
+    dbo.collection("users").findOne({ userId: userId, password: password }, function(err, result) {
       if (err) throw err;
       console.log(result);
       console.log('Login success');
