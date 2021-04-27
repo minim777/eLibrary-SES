@@ -75,21 +75,31 @@
           }
         </script>
     <!-- creating add form -->
+    <div id="header">
+        <h1>Update a Book </h1>
+    </div>    
+    
+        <form class="container" method="post" action="/">
+            <div>
+                <input class="form-control" name="currentTitle" placeholder="Enter the current name of the Book you wish to edit">
+            </div>
+            <div>
+                <input class="form-control" name="newTitle" placeholder="Enter new Title...">
+            </div> 
+            <div>
+                <input class="form-control" name="newAuthor" placeholder="Enter new Author...">
+            </div>  
+            <div>
+                <input class="form-control" name="newCategory" placeholder="Enter new Category...">
+            </div> 
+            <div>
+                <input class="form-control" name="newType" placeholder="Enter new Type...">
+            </div>    
 
-
-        <div id="header">
-            <h1>Remove Book </h1>
-        </div>    
-        
-            <form class="container" method="post" action="/">
-                <div>
-                    <input class="form-control" name = "remove_Title" placeholder="Enter Title of Book to be removed...">
-                </div>    
-                <div class="form-group">
-                    <button type="submit"> Remove Book </button>
-                </div>   
-            </form>
-
+            <div class="form-group">
+                <button type="submit"> Update Book </button>
+            </div>   
+        </form>
 
       <footer>
         <p>© SES Group 3</p>
@@ -98,3 +108,4 @@
     </div>
   </body>
 </html>
+ 
