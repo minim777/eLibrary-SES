@@ -4,6 +4,7 @@ const ejs = require('ejs');
 const app = express();
 const router = express.Router(); 
 const MongoClient = require('mongodb').MongoClient;
+var objectId = require('mongodb').ObjectId; 
 const assert = require('assert');
 const bodyParser = require("body-parser"); 
 const { Router } = require('express');
@@ -68,11 +69,11 @@ app.get('/', (req,res, next) => {
 
 
 app.post('/', function(req, res, next) {
-    var title = req.body.remove_Title
+    var id = req.body.id
 
     const db = client.db(dbName);
     const collection = db.collection('Books');
-    collection.deleteOne({"title" : title}, function(err, result) {
+    collection.deleteOne({"_id" : new objectId(id)}, function(err, result) {
         assert.equal(null, err); 
         console.log('Book deleted');
     }) 
