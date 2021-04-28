@@ -167,12 +167,14 @@ table {
   background-color: #DCDCDC;
 }
 
-.deletebtn {
+.morebtn {
   cursor: pointer;
 }
 
-.deleteuserbtn {
+.usersrecordbtn {
   margin-top: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
   padding: 10px 20px;
   font-size: 18px;
   font-weight: bold;
