@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+    <%- include('./partials/head.ejs') %>
+    <body>
+        <div class="tint">
+            <div class="pagecontainer">
+                <%- include('./partials/nav.ejs') %>
+                <main class="maincontent">
+                    <div class="tablelist">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="tableheader" colspan="5">Record ID: <%=user._id%></th>
+                                </tr>
+                                <tr>
+                                    <th class="tablesubhead" scope="col">UserID</th>
+                                    <th class="tablesubhead" scope="col">Full Name</th>
+                                    <th class="tablesubhead" scope="col">Type</th>
+                                    <th class="tablesubhead" scope="col">Email</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><%=user.userID%></td>
+                                    <td><%=user.Name%></td>
+                                    <td><%=user.Type%></td>
+                                    <td><%=user.Email%></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <input  class="deleteuserbtn" type="button" data-doc="<%= user._id%>" value="Delete User"/>
+                    </div>
+                </main>
+                <%- include('./partials/footer.ejs') %>
+            </div>
+        </div>
+    </body>
+</html>
