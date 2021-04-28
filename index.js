@@ -84,7 +84,7 @@ app.post("/login", (req, res) => {
   MongoClient.connect(url, function(err, db) {
     if (err) throw err;
     var dbo = db.db("eLMS");
-    dbo.collection("users").findOne({userId: req.body.userId}, function(err, result) {
+    dbo.collection("users").findOne({userId: userId, password: password}, function(err, result) {
       if (err) throw err;
       else {
       console.log(result);
