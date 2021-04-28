@@ -28,7 +28,7 @@ db.on('error', function(err) {
 // Load/Register View Engine
 app.set('/views/', path.join(__dirname, '/views/'));
 app.set('view engine', 'ejs');
-app.use(express.static(path.join(__dirname, '/public/adminmenu/')))
+app.use(express.static(path.join(__dirname, '/public/')))
 
 // Home Route
 app.get('/', function(req, res){
