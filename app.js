@@ -2,8 +2,9 @@ const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 const userRoutes = require('./routes/adminmenu/userRoutes');
-const app = express(); // Initialise app
 const port = process.env.port || 3000;
+
+const app = express(); // Initialise app
 
 // Connect to database
 const mongo = "mongodb+srv://deepak:mullumbimbo@2020@ses1a.kdj8l.mongodb.net/eLMS?retryWrites=true&w=majority"
