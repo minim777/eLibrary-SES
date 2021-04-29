@@ -34,8 +34,9 @@ mongoose.connect('mongodb+srv://leo:calligraphy004@ses1a.kdj8l.mongodb.net/eLMS'
 //Schemas
 var userSchema = new mongoose.Schema({
   userId: String,
-  password: String,
-  email: String
+  Name: String,
+  Password: String,
+  Email: String
 });
 
 var user = mongoose.model('Users', userSchema);
@@ -52,7 +53,7 @@ var user = mongoose.model('Users', userSchema);
 //     });
 // });
 app.post('/register', async (req, res) => {
-	const { userId, password, email } = req.body
+	const { userId, Name, Password, Email } = req.body
 
 	if (password.length < 5) {
 		return res.json({
@@ -64,8 +65,9 @@ app.post('/register', async (req, res) => {
 	try {
 		const response = await user.create({
 			userId,
-			password,
-      email
+      Name,
+			Password,
+      Email
 		})
 		console.log('User created successfully: ', response)
 	} catch (error) {
@@ -79,12 +81,13 @@ app.post('/register', async (req, res) => {
 })
 
 app.post("/login", (req, res) => {
+  const { userId, Password } = req.body;
   var MongoClient = require('mongodb').MongoClient;
   var url = 'mongodb+srv://leo:calligraphy004@ses1a.kdj8l.mongodb.net/eLMS';
   MongoClient.connect(url, function(err, db) {
     if (err) throw err;
     var dbo = db.db("eLMS");
-    dbo.collection("users").findOne({userId: userId, password: password}, function(err, result) {
+    dbo.collection("users").findOne({userId: userId, Password: Password}, function(err, result) {
       if (err) throw err;
       else {
       console.log(result);
