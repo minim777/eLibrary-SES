@@ -23,7 +23,21 @@ const single_user = function(req, res){
       });
 }
 
+const adduser_get = function(req, res){
+    res.render('adminmenu/adduser', {
+        title: "Add User"
+    });
+}
+
+const updateuserinfo_get = function(req, res){
+    res.render('adminmenu/updateuserinfo', {
+        title: "Update User Information"
+    });
+}
+
 module.exports = {
     view_users,
-    single_user
+    single_user,
+    adduser_get, 
+    updateuserinfo_get
 }

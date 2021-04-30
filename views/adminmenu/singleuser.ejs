@@ -29,7 +29,7 @@
                             </tbody>
                         </table>
                         <input  class="usersrecordbtn" type="button" data-doc="<%= user._id%>" value="Delete"/>
-                        <input  class="usersrecordbtn" type="button" data-doc="<%= user._id%>" value="Edit"/>
+                        <input  class="usersrecordbtn" type="button" data-doc="<%= user._id%>" value="Update" onclick="window.location.href='/updateuserinfo';"/>
                     </div>
                 </main>
                 <%- include('./partials/footer.ejs') %>

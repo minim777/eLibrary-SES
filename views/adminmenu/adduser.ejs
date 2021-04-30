@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+    <%- include('./partials/head.ejs') %>
+    <body>
+        <div class="tint">
+            <div class="pagecontainer">
+                <%- include('./partials/nav.ejs') %>
+                <main>
+                    <div class="container"> 
+                        <h1>Register a User</h1>
+                        <div class="formcontainer">
+                            <form action="/viewusers" method="POST" class="data_form">
+                                <p style="font-size: 1.3em; font-weight: bold; text-align: center;">
+                                Fill in this form to manually register a user
+                                </p>
+                                <hr>
+                                    <label for="userID">Enter a UserID: </label><br>
+                                    <input type="text" userID="userID" id="userID" placeholder="enter userID" required><br>
+
+                                    <label for="name">Enter a full name: </label><br>
+                                    <input type="name" name="name" id="name" placeholder="enter full name" required><br>
+
+                                    <label for="email">Enter a email: </label><br>
+                                    <input type="email" email="email" id="email" placeholder="enter email" required><br>
+
+                                    <label for="type">Enter user type: </label><br>
+                                    <input type="text" type="type" id="type" placeholder="enter a type" required><br>
+
+                                    <label for="password">Set a password: </label><br>
+                                    <input type="password" password="password" id="password" placeholder="enter a password" required><br>
+                            </form>
+                        </div>
+                    </div>
+                    <input class="usersrecordbtn" type="submit" onclick="window.location.href='/viewusers';" value="Register User"/>
+                </main>
+                <%- include('./partials/footer.ejs') %>
+            </div>
+        </div>
+    </body>
+</html>

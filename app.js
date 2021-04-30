@@ -30,6 +30,15 @@ app.set('/views/', path.join(__dirname, '/views/'));
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, '/public/')))
 
+// body parser middleware
+// parse application/x-www-form-urlencoded
+app.use(express.urlencoded({
+      extended: false
+  })
+);
+// parse application/json
+app.use(express.json());
+
 // Home Route
 app.get('/', function(req, res){
     res.render('adminmenu/adminmenu', {
