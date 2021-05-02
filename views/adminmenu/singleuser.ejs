@@ -12,13 +12,15 @@
                         <table>
                             <thead>
                                 <tr>
-                                    <th class="tableheader" colspan="5">Record ID: <br> <%=user._id%></th>
+                                    <th class="tableheader" colspan="6">Record ID: <br> <%=user._id%></th>
                                 </tr>
                                 <tr>
-                                    <th class="tablesubhead" scope="col">UserID</th>
+                                    <th class="tablesubhead" scope="col">userID</th>
                                     <th class="tablesubhead" scope="col">Full Name</th>
                                     <th class="tablesubhead" scope="col">Type</th>
                                     <th class="tablesubhead" scope="col">Email</th>
+                                    <th class="tablesubhead" scope="col">D.O.B</th>
+                                    <th class="tablesubhead" scope="col">Registration Date</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -27,11 +29,14 @@
                                     <td><%=user.Name%></td>
                                     <td><%=user.Type%></td>
                                     <td><%=user.Email%></td>
+                                    <td><%=user.DOB%></td>
+                                    <td><%=user.Registration_Date%></td>
                                 </tr>
                             </tbody>
                         </table>
                         <input id="deleteuserbtn" class="usersrecordbtn" type="button" data-id="<%= user._id%>" value="Delete"/>
                     </div>
+
                 </main>
                 <%- include('./partials/footer.ejs') %>
             </div>

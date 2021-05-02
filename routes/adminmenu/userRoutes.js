@@ -11,8 +11,5 @@ router.get('/user/:id', userController.singleuser_get);
 // delete a single user Route 
 router.delete('/user/:id', userController.singleuser_delete);
 
-// Add a User Get Route 
-router.get('/adduser', userController.adduser_get);
-
 
 module.exports = router;

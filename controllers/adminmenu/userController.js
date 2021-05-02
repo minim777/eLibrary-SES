@@ -1,4 +1,4 @@
-const User = require('../../models/adminmenu/users'); // Bring in the models
+const User = require('../../models/adminmenu/users'); // import models
 
 const view_users = function(req, res){
     User.find({}, function(err, users){
@@ -34,18 +34,8 @@ const singleuser_delete = function(req, res){
     });
 }
 
-
-
-const adduser_get = function(req, res){
-    res.render('adminmenu/adduser', {
-        title: "Add User"
-    });
-}
-
-
 module.exports = {
     view_users,
     singleuser_get,
-    singleuser_delete,
-    adduser_get
+    singleuser_delete
 }

@@ -18,8 +18,11 @@
   },
   "homepage": "https://github.com/minim777/eLibrary-SES#readme",
   "dependencies": {
+    "connect-flash": "^0.1.1",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
+    "express-messages": "^1.0.1",
+    "express-session": "^1.17.1",
     "jquery": "^3.6.0",
     "jsdom": "^16.5.3",
     "mongoose": "^5.12.6"
