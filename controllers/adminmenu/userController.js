@@ -14,14 +14,27 @@ const view_users = function(req, res){
     });
 }
 
-const single_user = function(req, res){
+const singleuser_get = function(req, res){
     User.findById(req.params.id, function(err, user){
-        res.render('adminmenu/singleuser', {
+       res.render('adminmenu/singleuser', {
           title: "Single User",
           user: user
         });
       });
 }
+
+const singleuser_delete = function(req, res){
+    let query = {_id:req.params.id}
+
+    User.deleteOne(query, function(err){
+        if(err){
+            console.log(err);
+        }
+        res.send('Success'); 
+    });
+}
+
+
 
 const adduser_get = function(req, res){
     res.render('adminmenu/adduser', {
@@ -29,15 +42,10 @@ const adduser_get = function(req, res){
     });
 }
 
-const updateuserinfo_get = function(req, res){
-    res.render('adminmenu/updateuserinfo', {
-        title: "Update User Information"
-    });
-}
 
 module.exports = {
     view_users,
-    single_user,
-    adduser_get, 
-    updateuserinfo_get
+    singleuser_get,
+    singleuser_delete,
+    adduser_get
 }

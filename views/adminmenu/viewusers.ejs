@@ -32,7 +32,7 @@
                                     <td><%=user.Name%></td>
                                     <td><%=user.Type%></td>
                                     <td><%=user.Email%></td>
-                                    <td><input class="morebtn" type="button" onclick="window.location.href='/viewusers/<%= user._id%>';" value="More"/></td>
+                                    <td><input type="button" onclick="window.location.href='/user/<%= user._id%>';" value="More"/></td>
                                 </tr>
                                 <%})%>
                             </tbody>
@@ -44,3 +44,4 @@
         </div>
     </body>
 </html>
+<!-- onclick="window.location.href='';" -->

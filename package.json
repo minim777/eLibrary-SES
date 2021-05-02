@@ -1,8 +1,8 @@
 {
-  "name": "eLibrary-SES",
+  "name": "elibrary-ses",
   "version": "1.0.0",
-  "description": "\"# eLibrary-SES\"  \"# eLibrary-SES\"  # eLibrary-SES",
-  "main": "index.js",
+  "description": "",
+  "main": "app.js",
   "scripts": {
     "start": "nodemon app"
   },
@@ -20,6 +20,8 @@
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.1",
+    "jquery": "^3.6.0",
+    "jsdom": "^16.5.3",
     "mongoose": "^5.12.6"
   },
   "devDependencies": {

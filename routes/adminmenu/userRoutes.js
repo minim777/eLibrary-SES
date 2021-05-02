@@ -5,16 +5,14 @@ const router = express.Router();
 // ViewUsers Route
 router.get('/viewusers', userController.view_users);
 
-// SingleUsers Route
-router.get('/viewusers/:id', userController.single_user);
+// view a single user's info Route
+router.get('/user/:id', userController.singleuser_get);
+
+// delete a single user Route 
+router.delete('/user/:id', userController.singleuser_delete);
 
 // Add a User Get Route 
 router.get('/adduser', userController.adduser_get);
-
-
-//Update user information route
-router.get('/updateuserinfo', userController.updateuserinfo_get);
-
 
 
 module.exports = router;
