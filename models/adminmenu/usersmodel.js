@@ -22,6 +22,10 @@ var UserSchema = new Schema({
    Type:{
      type: String,
      required: true
+   },  
+   Registration_Date:{
+     type: Date, 
+     required: true
    }
 });
 

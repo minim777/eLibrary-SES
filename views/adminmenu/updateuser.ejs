@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+    <%- include('./partials/head.ejs') %>
+    <body>
+        <div class="tint">
+            <div class="pagecontainer">
+                <%- include('./partials/nav.ejs') %>
+                <main>
+                    <div class="container"> 
+                        <h1>Register a User</h1>
+                        <div class="formcontainer">
+                            <form method="POST" action='/user/add' class="data_form">
+                                <p style="font-size: 1.3em; font-weight: bold; text-align: center;">
+                                Update <%= user._id %>'s details:
+                                </p>
+                                <hr>
+                                    <label for="userID">Enter the user's ID: </label><br>
+                                    <input type="text" name="userID" id="userID" placeholder="enter the user's id" value="<%= user._id %>" required><br>
+
+                                    <label for="Name">Enter the user's full name: </label><br>
+                                    <input type="name" name="Name" id="userName" placeholder="enter the user's name" value="<%= user.Name %>" required><br>
+
+                                    <label for="Email">Enter the user's email: </label><br>
+                                    <input type="email" name="Email" id="email" placeholder="enter the user's email" value="<%= user.Email %>"required><br>
+
+                                    <label for="Password">Set a default password for the user: </label><br>
+                                    <input type="password" name="Password" id="password" placeholder="Enter a password" value="<%= user.Password %>" required><br>                 
+                                    
+                                    <p>Select a user type:</p>
+                                    <div class="optioncontainer">
+                                        <input type="radio" id="usertype1"
+                                         name="Type" value="Student">
+                                        <label for="usertype1">Student</label>
+                                    
+                                        <input type="radio" id="usertype2"
+                                         name="Type" value="Staff">
+                                        <label for="usertype2">Staff</label>
+                                    </div>
+                                    
+                                    <label for="Registration_Date">Enter the registration date (i.e. the current date): </label><br>
+                                    <input type="date" name="Registration_Date" id="regodate" value="<%= user.Registration_Date %>" required><br> 
+
+                                    <input id="addrecordbtn" type="submit" value="Update"/>
+                            </form>
+                        </div>
+                    </div>
+                </main>
+                <%- include('./partials/footer.ejs') %>
+            </div>
+        </div>
+    </body>
+</html>

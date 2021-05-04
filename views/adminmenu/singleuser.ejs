@@ -6,17 +6,19 @@
             <div class="pagecontainer">
                 <%- include('./partials/nav.ejs') %>
                 <main class="maincontent">
+                    <script src="adminmenu/js/deleteuser.js"></script>
                     <div class="tablelist">
                         <table>
                             <thead>
                                 <tr>
-                                    <th class="tableheader" colspan="5">Record ID: <%=user._id%></th>
+                                    <th class="tableheader" colspan="6">Record ID: <br> <%=user._id%></th>
                                 </tr>
                                 <tr>
-                                    <th class="tablesubhead" scope="col">UserID</th>
+                                    <th class="tablesubhead" scope="col">userID</th>
                                     <th class="tablesubhead" scope="col">Full Name</th>
                                     <th class="tablesubhead" scope="col">Type</th>
                                     <th class="tablesubhead" scope="col">Email</th>
+                                    <th class="tablesubhead" scope="col">Registration Date</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -25,11 +27,14 @@
                                     <td><%=user.Name%></td>
                                     <td><%=user.Type%></td>
                                     <td><%=user.Email%></td>
+                                    <td><%=user.Registration_Date%></td>
                                 </tr>
                             </tbody>
                         </table>
-                        <input  class="deleteuserbtn" type="button" data-doc="<%= user._id%>" value="Delete User"/>
+                        <input id="deleteuserbtn" class="userrecordbtn" type="button" data-id="<%= user._id%>" value="Delete"/>
+                        <input class="userrecordbtn" onclick="window.location.href='/user/:id/update';" type="button" value="Update"/>
                     </div>
+
                 </main>
                 <%- include('./partials/footer.ejs') %>
             </div>

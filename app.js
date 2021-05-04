@@ -1,9 +1,16 @@
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
-const userRoutes = require('./routes/adminmenu/userRoutes');
+const adminmenuRoutes = require('./routes/adminmenu/adminmenuRoutes');
 const app = express(); // Initialise app
 const port = process.env.port || 3000;
+
+// Get Jquery working
+const jsdom = require('jsdom');
+const dom = new jsdom.JSDOM("");
+const jquery = require('jquery')(dom.window);
+app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
+
 
 // Connect to database
 const mongo = "mongodb+srv://deepak:mullumbimbo@2020@ses1a.kdj8l.mongodb.net/eLMS?retryWrites=true&w=majority"
@@ -28,17 +35,15 @@ db.on('error', function(err) {
 // Load/Register View Engine
 app.set('/views/', path.join(__dirname, '/views/'));
 app.set('view engine', 'ejs');
-app.use(express.static(path.join(__dirname, '/public/adminmenu/')))
+app.use(express.static(path.join(__dirname, '/public/')));
 
-// Home Route
-app.get('/', function(req, res){
-    res.render('adminmenu/adminmenu', {
-        title: "eLMS: Admin Menu"
-    });
-});
+//parse application/json
+app.use(express.json());
+//parse application/x-www-form-urlencoded
+app.use(express.urlencoded({ extended: true }));
 
 // routes
-app.use(userRoutes);
+app.use(adminmenuRoutes);
 
 // Start Server
 app.listen(port, err => {

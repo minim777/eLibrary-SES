@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+    <%- include('./partials/head.ejs') %>
+    <body>
+        <div class="tint">
+            <div class="pagecontainer">
+                <%- include('./partials/nav.ejs') %>
+                <main>
+                    <div class="container"> 
+                        <h1>Add a Book</h1>
+                        <div class="formcontainer">
+                            <form method="POST" action='/book/add' class="data_form">
+                                <p style="font-size: 1.3em; font-weight: bold; text-align: center;">
+                                Fill in this form to add a book to the library
+                                </p>
+                                <hr>
+                                    <label for="Title">Enter the book's title: </label><br>
+                                    <input type="text" name="Title" id="title" placeholder="Enter book's title here" required><br>
+
+                                    <label for="Author">Enter the book's author: </label><br>
+                                    <input type="name" name="Author" id="author" placeholder="Enter book's author here" required><br>
+
+                                    <label for="ForNF">Is the book fiction or non-fiction? </label><br>
+                                    <input type="text" name="ForNF" id="ficornonfic" placeholder="fiction or non-fiction?" required><br>
+
+                                    <label for="Type">Enter the book's type: </label><br>
+                                    <input type="text" name="Type" id="type" placeholder="Enter the type of book it is here e.g. journal, textbook, novel, encyclopedia" required><br>                 
+                                    
+                                    <label for="Genre">Enter the book's genre: </label><br>
+                                    <input type="text" name="Genre" id="type" placeholder="Enter the book's genre i.e. fantasy, adventure, mystery" required><br>
+
+
+                                    <label for="Blurb">Enter the book's blurb: </label><br>
+                                    <textarea name="Blurb" id="blurb" rows="10" placeholder="Enter the book's blurb here"></textarea>
+
+                                    <label for="availableCopies">Number of available copies: </label><br>
+                                    <input type="number" name="availableCopies" id="availablecopies" placeholder="How many copies of this book are available" required><br>
+                            
+                                    <input id="addrecordbtn" type="submit" value="Add to Library"/>
+                            </form>
+                        </div>
+                    </div>
+                    
+                </main>
+                <%- include('./partials/footer.ejs') %>
+            </div>
+        </div>
+    </body>
+</html>

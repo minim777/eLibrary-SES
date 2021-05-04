@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+    <%- include('./partials/head.ejs') %>
+    <body>
+        <div class="tint">
+            <div class="pagecontainer">
+                <%- include('./partials/nav.ejs') %>
+                <main class="maincontent">
+                    <script src="adminmenu/js/deletebook.js"></script>
+                    <div class="container">
+                        <h1><%= book.Title %></h1>
+                        <div class="bookinfocontainer">
+                            <div style="padding: 20px;">
+                                <p><b>Book ID: </b><%= book._id %></p>
+                                <p><b>Author: </b><%= book.Author %></p>
+                                <p><b>Type: </b><%= book.Type %></p>
+                                <p><b>Fiction/Non-fiction: </b><%= book.ForNF %></p>
+                                <p><b>Genre: </b><%= book.Genre %></p>
+                                <p><b>Author: </b><%= book.Author %></p>
+                                <h4>Blurb</h4>
+                                <p><%= book.Blurb %></p>
+                                <p><b>How many copies are available: </b><%= book.availableCopies%></p>
+                            </div>
+                        </div>
+                    </div>
+                    <input id="deletebookbtn" class="userrecordbtn" type="button" data-id="<%= book._id%>" value="Delete"/>
+                    <input class="userrecordbtn" type="button" onclick="window.location.href='/book/update/<%= book._id %>';" value="Update"/>
+                </main>
+                <%- include('./partials/footer.ejs') %>
+            </div>
+        </div>
+    </body>
+</html>
