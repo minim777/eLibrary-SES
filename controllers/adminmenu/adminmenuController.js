@@ -121,6 +121,17 @@ const singlebook_get = function(req, res){
        });
 }
 
+const singlebook_delete = function(req, res){
+    let query = {_id:req.params.id}
+
+    Book.deleteOne(query, function(err){
+        if(err){
+            console.log(err);
+        }
+        res.send('Success'); 
+    });
+}
+
 
 module.exports = {
     home_page,
@@ -132,5 +143,6 @@ module.exports = {
     view_books, 
     addbook_get, 
     addbook_post, 
-    singlebook_get
+    singlebook_get, 
+    singlebook_delete
 }

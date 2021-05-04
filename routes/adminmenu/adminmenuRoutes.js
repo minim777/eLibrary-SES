@@ -32,4 +32,7 @@ router.post('/book/add', adminmenuController.addbook_post);
 // view a single book's info Route 
 router.get('/book/:id', adminmenuController.singlebook_get);
 
+// delete a single user Route 
+router.delete('/book/:id', adminmenuController.singlebook_delete);
+
 module.exports = router;

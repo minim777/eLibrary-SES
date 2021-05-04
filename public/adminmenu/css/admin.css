@@ -279,4 +279,30 @@ table {
 }
 
 
+.bookinfocontainer {
+  background-color: #DCDCDC;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  margin-top: -24px;
+  color: black;
+}
+
+.bookinfocontainer > p {
+  font-size: 18px;
+}
+
+#deletebookbtn {
+  box-shadow: 4px 6px 6px 8px rgba(0,0,0,0.5);
+  margin-top: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: red ;
+  border: 1px solid red;
+  border-radius: 6px;
+  cursor: pointer;
+}
 
