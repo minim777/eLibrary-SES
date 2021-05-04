@@ -23,7 +23,8 @@
                             </div>
                         </div>
                     </div>
-                    <input id="deletebookbtn" type="button" data-id="<%= book._id%>" value="Delete"/>
+                    <input id="deletebookbtn" class="userrecordbtn" type="button" data-id="<%= book._id%>" value="Delete"/>
+                    <input class="userrecordbtn" type="button" onclick="window.location.href='/book/update/<%= book._id %>';" value="Update"/>
                 </main>
                 <%- include('./partials/footer.ejs') %>
             </div>

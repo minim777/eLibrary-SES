@@ -69,6 +69,7 @@ const singleuser_delete = function(req, res){
     });
 }
 
+
 const view_books = function(req, res){
     Book.find({}, function(err, books){
         if(err){
@@ -132,6 +133,38 @@ const singlebook_delete = function(req, res){
     });
 }
 
+const updatebook_get = function(req, res){
+    Book.findById(req.params.id, function(err, book){
+        res.render('adminmenu/updatebook', {
+            title: "Update Book",
+            book: book
+        });
+    });
+}
+
+const updatebook_post = function(req, res){
+    let book = {};
+        book.Title = req.body.Title;
+        book.Author = req.body.Author;
+        book.Type = req.body.Type;
+        book.ForNF = req.body.ForNF;
+        book.Genre = req.body.Genre;
+        book.Blurb = req.body.Blurb; 
+        book.availableCopies = req.body.availableCopies;
+
+    let query = {_id: req.params.id}
+
+    Book.updateMany(query, book, function(err){
+        if(err){
+            console.log(err);
+            return;
+        }
+        else {
+            res.redirect('/books');
+        }
+    });
+}
+
 
 module.exports = {
     home_page,
@@ -144,5 +177,7 @@ module.exports = {
     addbook_get, 
     addbook_post, 
     singlebook_get, 
-    singlebook_delete
+    singlebook_delete, 
+    updatebook_get,
+    updatebook_post 
 }

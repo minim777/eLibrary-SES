@@ -31,7 +31,8 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <input id="deleteuserbtn" type="button" data-id="<%= user._id%>" value="Delete"/>
+                        <input id="deleteuserbtn" class="userrecordbtn" type="button" data-id="<%= user._id%>" value="Delete"/>
+                        <input class="userrecordbtn" onclick="window.location.href='/user/:id/update';" type="button" value="Update"/>
                     </div>
 
                 </main>
