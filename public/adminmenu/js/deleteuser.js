@@ -8,8 +8,8 @@ $(function(){
              type: 'DELETE', 
              url: '/user/'+id, 
              success: function(response){
-                 alert('Deleting Article'); 
-                 window.location.href="/viewusers"
+                 alert('Deleting User'); 
+                 window.location.href="/users"
              }, 
              error: function(err){
                  console.log(err);

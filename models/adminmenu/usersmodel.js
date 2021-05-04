@@ -22,13 +22,9 @@ var UserSchema = new Schema({
    Type:{
      type: String,
      required: true
-   }, 
-   DOB:{
-     type: String, 
-     required: true
-   }, 
+   },  
    Registration_Date:{
-     type: String, 
+     type: Date, 
      required: true
    }
 });

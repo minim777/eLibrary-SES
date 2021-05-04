@@ -6,7 +6,6 @@
             <div class="pagecontainer">
                 <%- include('./partials/nav.ejs') %>
                 <main class="maincontent">
-                    <script src="/jquery/jquery.min.js"></script>
                     <script src="adminmenu/js/deleteuser.js"></script>
                     <div class="tablelist">
                         <table>
@@ -19,7 +18,6 @@
                                     <th class="tablesubhead" scope="col">Full Name</th>
                                     <th class="tablesubhead" scope="col">Type</th>
                                     <th class="tablesubhead" scope="col">Email</th>
-                                    <th class="tablesubhead" scope="col">D.O.B</th>
                                     <th class="tablesubhead" scope="col">Registration Date</th>
                                 </tr>
                             </thead>
@@ -29,12 +27,11 @@
                                     <td><%=user.Name%></td>
                                     <td><%=user.Type%></td>
                                     <td><%=user.Email%></td>
-                                    <td><%=user.DOB%></td>
                                     <td><%=user.Registration_Date%></td>
                                 </tr>
                             </tbody>
                         </table>
-                        <input id="deleteuserbtn" class="usersrecordbtn" type="button" data-id="<%= user._id%>" value="Delete"/>
+                        <input id="deleteuserbtn" type="button" data-id="<%= user._id%>" value="Delete"/>
                     </div>
 
                 </main>

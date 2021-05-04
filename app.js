@@ -1,10 +1,8 @@
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
-const userRoutes = require('./routes/adminmenu/userRoutes');
+const adminmenuRoutes = require('./routes/adminmenu/adminmenuRoutes');
 const app = express(); // Initialise app
-const flash = require('connect-flash');
-const session = require('express-session');
 const port = process.env.port || 3000;
 
 // Get Jquery working
@@ -39,17 +37,13 @@ app.set('/views/', path.join(__dirname, '/views/'));
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, '/public/')));
 
-
-
-// Home Route
-app.get('/', function(req, res){
-    res.render('adminmenu/adminmenu', {
-        title: "eLMS: Admin Menu"
-    });
-});
+//parse application/json
+app.use(express.json());
+//parse application/x-www-form-urlencoded
+app.use(express.urlencoded({ extended: true }));
 
 // routes
-app.use(userRoutes);
+app.use(adminmenuRoutes);
 
 // Start Server
 app.listen(port, err => {
