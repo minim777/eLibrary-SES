@@ -154,7 +154,7 @@ const updatebook_post = function(req, res){
 
     let query = {_id: req.params.id}
 
-    Book.updateMany(query, book, function(err){
+    Book.updateOne(query, book, function(err){
         if(err){
             console.log(err);
             return;
