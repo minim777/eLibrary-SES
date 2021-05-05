@@ -152,6 +152,7 @@ const updatebook_post = function(req, res){
         book.Blurb = req.body.Blurb; 
         book.availableCopies = req.body.availableCopies;
 
+    
     let query = {_id: req.params.id}
 
     Book.updateMany(query, book, function(err){
