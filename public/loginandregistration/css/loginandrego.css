@@ -1,0 +1,18 @@
+body {
+    font-family: "NB International Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-image: url("../images/alumnigreen.jpg");
+    background-size: cover;
+    background-repeat: repeat-y;
+    height: 100%;
+}
+
+.tint {
+    background: rgba(0, 0, 0, 0.7);
+    z-index: auto;
+    position: fixed;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+}
