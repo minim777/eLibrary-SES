@@ -3,6 +3,7 @@ const path = require('path');
 const mongoose = require('mongoose');
 const adminmenuRoutes = require('./routes/adminmenu/adminmenuRoutes');
 const loginandregoRoutes = require('./routes/loginandregistration/loginandregoRoutes');
+const usermenuRoutes =  require('./routes/usermenu/usermenuRoutes');
 const app = express(); // Initialise app
 const port = process.env.port || 3000;
 
@@ -46,6 +47,7 @@ app.use(express.urlencoded({ extended: true }));
 // routes
 app.use(loginandregoRoutes);
 app.use(adminmenuRoutes);
+app.use(usermenuRoutes);
 
 // Start Server
 app.listen(port, err => {
