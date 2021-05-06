@@ -3,6 +3,9 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var BookSchema = new Schema({
+   _id: { 
+       type: mongoose.Schema.Types.ObjectId
+   },
    Title: {
        type: String, 
        required: true
@@ -25,7 +28,7 @@ var BookSchema = new Schema({
    }, 
    Blurb: {
        type: String, 
-       maxlength: 1000,
+       maxlength: 3000,
        required: true
    }, 
    availableCopies: {

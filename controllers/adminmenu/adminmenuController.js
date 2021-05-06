@@ -1,11 +1,11 @@
 const User = require('../../models/adminmenu/usersmodel'); // import models
 const Book = require('../../models/adminmenu/booksmodel'); // import models
 
+
 const home_page = function(req, res){
     res.render('adminmenu/adminmenu', {
         title: "eLMS: Admin Menu"
-    });
-}
+    });}
 
 const view_users = function(req, res){
     User.find({}, function(err, users){
@@ -152,10 +152,10 @@ const updatebook_post = function(req, res){
         book.Blurb = req.body.Blurb; 
         book.availableCopies = req.body.availableCopies;
 
+        let query = {_id:req.params.id}
     
-    let query = {_id: req.params.id}
 
-    Book.updateMany(query, book, function(err){
+    Book.updateOne(query, book, function(err){
         if(err){
             console.log(err);
             return;

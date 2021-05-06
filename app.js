@@ -11,10 +11,9 @@ const dom = new jsdom.JSDOM("");
 const jquery = require('jquery')(dom.window);
 app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
 
-
 // Connect to database
 const mongo = "mongodb+srv://deepak:mullumbimbo@2020@ses1a.kdj8l.mongodb.net/eLMS?retryWrites=true&w=majority"
-mongoose.connect(mongo,{
+mongoose.connect(mongo, {
   useNewUrlParser: true,
   useUnifiedTopology: true
  });
@@ -23,14 +22,14 @@ mongoose.connect(mongo,{
 var db = mongoose.connection;
 
 // check db connection
-db.on('open', function() {
-  console.log("Connected to MongoDB");
+db.once('open', function() {
+    console.log("Connected to MongoDB");
 });
 
 // check error for db connection
 db.on('error', function(err) {
-  console.log(err);
-});
+     console.log(err);
+ });
 
 // Load/Register View Engine
 app.set('/views/', path.join(__dirname, '/views/'));
