@@ -9,7 +9,7 @@ router.get('/adminmenu', adminmenuController.menu_home);
 router.get('/adminmenu/users', adminmenuController.view_users);
 
 // render add user form route
-router.get('/adminmeu/user/add', adminmenuController.adduser_get);
+router.get('/adminmenu/user/add', adminmenuController.adduser_get);
 
 // add a user to db route
 router.post('/adminmenu/user/add', adminmenuController.adduser_post);
@@ -27,7 +27,7 @@ router.get('/adminmenu/books', adminmenuController.view_books);
 router.get('/adminmenu/book/add', adminmenuController.addbook_get);
 
 // add book to db route 
-router.post('/aadminmenu/book/add', adminmenuController.addbook_post);
+router.post('/adminmenu/book/add', adminmenuController.addbook_post);
 
 // view a single book's info Route 
 router.get('/adminmenu/book/:id', adminmenuController.singlebook_get);

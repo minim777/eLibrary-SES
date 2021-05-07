@@ -1,4 +1,3 @@
-
 $(function(){
     $('#deleteuserbtn').on('click', function(e){
          $target = $(e.target);
@@ -6,10 +5,10 @@ $(function(){
 
          $.ajax({
              type: 'DELETE', 
-             url: '/user/'+id, 
+             url: '/adminmenu/user/'+id, 
              success: function(response){
                  alert('Deleting User'); 
-                 window.location.href="/users"
+                 window.location.href="/adminmenu/users"
              }, 
              error: function(err){
                  console.log(err);

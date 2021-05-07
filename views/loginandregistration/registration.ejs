@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <base href="/">
+        <link href="loginandregistration/css/loginandrego.css" rel="stylesheet"> 
+        <title><%= title %></title>
+    </head>
+    <body>
+        <div class="tint">
+            <div class="regocontainer">
+                <h1>eLMS Sign Up</h1>
+                <form class="regoform" method="POST" action="/registration">
+                    <input type="text" name="userID" id="userID" placeholder="User ID" required>
+
+                    <input type="name" name="Name" id="userName" placeholder="Full Name" required>
+
+                    <input type="email" name="Email" id="email" placeholder="Email" required>
+
+                    <input type="password" name="Password" id="password" placeholder="Password" required>
+
+                    <select name="Type" id="usertype" required>
+                        <option value="" disabled selected hidden>Are you Student or Staff?</option>
+                        <option value="Student" style="color: black">Student</option>
+                        <option value="Staff" style="color: black">Staff</option>
+                    </select>
+
+                    <input type="date" name="Registration_Date" id="regodate" required> 
+
+                    <input id="regobtn" type="submit" value="Sign Up"/>
+
+                    
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
