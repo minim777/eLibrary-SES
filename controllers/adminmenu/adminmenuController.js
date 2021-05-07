@@ -1,7 +1,7 @@
-const User = require('../../models/adminmenu/usersmodel'); // import models
-const Book = require('../../models/adminmenu/booksmodel'); // import models
+const User = require('../../models/usersmodel'); // import models
+const Book = require('../../models/booksmodel'); // import models
 
-const home_page = function(req, res){
+const menu_home = function(req, res){
     res.render('adminmenu/adminmenu', {
         title: "eLMS: Admin Menu"
     });
@@ -43,7 +43,7 @@ const adduser_post = function(req, res){
             return;
         }
         else {
-            res.redirect('/users');
+            res.redirect('/adminmenu/users');
         }
     });
 }
@@ -108,7 +108,7 @@ const addbook_post = function(req, res){
             return;
         }
         else {
-            res.redirect('/books');
+            res.redirect('/adminmenu/books');
         }
     });
 }
@@ -160,14 +160,14 @@ const updatebook_post = function(req, res){
             return;
         }
         else {
-            res.redirect('/books');
+            res.redirect('/adminmenu/books');
         }
     });
 }
 
 
 module.exports = {
-    home_page,
+    menu_home,
     view_users,
     adduser_get,
     adduser_post,
