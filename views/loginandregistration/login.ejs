@@ -9,9 +9,14 @@
     </head>
     <body>
         <div class="tint">
-            <div class="pagecontainer">
-                <main>
-                </main>
+            <div class="container">
+                <h1>eLMS Login</h1>
+                <form class="loginform" method="POST" action="/">
+                    <input type="email" id="e-mail" name="Email" placeholder="Email" required> 
+                    <input type="password" id="password" name="Password" placeholder="Password" required> 
+                    <input id="loginbtn" type="submit" value="Login">
+                    <a href="/registration">Don't have an account? Click here to sign up!</a>
+                </form>
             </div>
         </div>
     </body>

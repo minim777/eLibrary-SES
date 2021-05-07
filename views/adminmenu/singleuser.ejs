@@ -6,13 +6,14 @@
             <div class="pagecontainer">
                 <%- include('./partials/nav.ejs') %>
                 <main class="maincontent">
+                    <script src="/jquery/jquery.min.js"></script>
                     <script src="adminmenu/js/deleteuser.js"></script>
                     <div class="tablelist">
                         <table>
                             <thead>
                                 <tr>
-                                    <th class="tableheader" colspan="6">Record ID: <br> <%=user._id%></th>
-                                </tr>
+                                    <th class="tableheader" colspan="6">Record ID: <br> <%=user._id%></th> 
+                                </tr> 
                                 <tr>
                                     <th class="tablesubhead" scope="col">userID</th>
                                     <th class="tablesubhead" scope="col">Full Name</th>

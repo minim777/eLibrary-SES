@@ -43,6 +43,7 @@ const adduser_post = function(req, res){
             return;
         }
         else {
+            req.flash('success', "User Added");
             res.redirect('/adminmenu/users');
         }
     });

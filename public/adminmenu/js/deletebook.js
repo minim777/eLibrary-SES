@@ -5,10 +5,10 @@ $(function(){
 
          $.ajax({
              type: 'DELETE', 
-             url: '/book/'+id, 
+             url: '/adminmenu/book/'+id, 
              success: function(response){
                  alert('Deleting Book'); 
-                 window.location.href="/books"
+                 window.location.href="/adminmenu/books"
              }, 
              error: function(err){
                  console.log(err);
