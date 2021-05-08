@@ -10,11 +10,11 @@
                         <h1 class="tableheader">Books currently in eLibrary</h1>
                         <tr>
                             <div class="searchoptions">
-                                <select id="searchby" name="filter" >
-                                <option selectDisabled>Select Filter</option>
+                                <select id="searchby" required >
+                                <option value="" disabled selected>Select a Filter</option>
+                                <option id="Book ID">Book ID</option>
                                 <option id="Title">Title</option>
                                 <option id="Author">Author</option>
-                                <option id="Genre">Category</option>
                                 <option id="Type">Type</option>
                             </select>
                                 <input id="searchInput" type="text" placeholder="Search Books..." />
@@ -22,9 +22,20 @@
                             </div>
                         </tr>
                     </div>
-
+                            <style>
+                                select:required:invalid {
+                                color: #666;
+                                }
+                                option[value=""][disabled] {
+                                display: none;
+                                }
+                                option {
+                                color: #000;
+                                }
+                            </style>
+                      
                       <div class="tablelist">   
-                        <table>
+                        <table id="bookTable">
                             <thead>
                                 <tr>
                                     <th class="tablesubhead" scope="col">Book ID</th>
@@ -36,33 +47,47 @@
 
                             </thead>
                             
-                    
-                                
-                            <!-- <div id="searchoptions">
-                              <select id="searchby" name="filter" >
-                                <option selectDisabled>Select Filter</option>
-                                <option id="Title">Title</option>
-                                <option id="Author">Author</option>
-                                <option id="Genre">Category</option>
-                                <option id="Type">Type</option>
-                              </select>
-                                    <input id="searchInput" type="text" placeholder="Search Books..." />
-                                    <input id="searchbutton" type="submit" value="Search" onclick = "searchCommand();" /> 
-                            </div>
-                       -->
                             
                             <tbody>
                                 <% booklist.forEach(book => {%>
-                                <tr>
+                                <tr class="bookinfo">
                                 <td><%=book._id%></td>
                                 <td><%=book.Title%></td>
                                 <td><%=book.Author%></td>
                                 <td><%=book.Type%></td>
-                                <td><input type="button" value="More"/></td>
+                                <td><input type="button" value="More" class="morebtn"/></td>
                                 </tr>
                                 <%})%>
                             </tbody>
                         </table>
+
+                        <script>
+                            function searchCommand() {
+                              // Declare variables
+                              console.log("this works"); 
+                              var input, filter, table, tr, td, i, txtValue, dropnum;
+                              input = document.getElementById("searchInput");
+                              filter = input.value.toUpperCase();
+                              table = document.getElementById("bookTable");
+                              tr = table.getElementsByTagName("tr");
+                              dropnum = document.getElementById("searchby").selectedIndex - 1;
+                                
+                  
+                              // Loop through all table rows, and hide those who don't match the search query
+                              for (i = 0; i < tr.length; i++) {
+                                td = tr[i].getElementsByTagName("td")[dropnum];
+                                if (td) {
+                                  txtValue = td.textContent || td.innerText;
+                                  if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                    tr[i].style.display = "";
+                                  } else {
+                                    tr[i].style.display = "none";
+                                  }
+                                }
+                              }
+                            }
+                          </script>
+
                 </main>
                 <%- include('./partials/footer.ejs') %>
             </div>

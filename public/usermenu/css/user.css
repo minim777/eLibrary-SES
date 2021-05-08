@@ -82,6 +82,7 @@ footer > p {
   position: absolute;
   background-color: rgb(105, 105, 105);
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  
   z-index: 1;
 }
 .dropdown-content a {
@@ -126,9 +127,9 @@ main {
   margin-top: 5em;
   margin-left: -2.0em;
   margin-right: -2.0em;
-  width: 104%;
+  width: 103.9%;
   border-collapse: collapse;
-  box-shadow: 8px 8px 16px 8px rgba(0,0,0,0.5);
+  background-color: rgb(48, 46, 46); 
 }
 
 
@@ -137,9 +138,48 @@ main {
   margin: auto;
 }
 
+#searchby {
+  margin: auto;
+  align-self: center;
+  width: 20%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: large;
+  border: 3px solid black;
+  margin-top: -10px;
+  margin-bottom: 14px;
+  border-radius: 7px;
+  background-color: #DCDCDC;
+}
 
+input[id="searchInput"] {
+  margin: auto;
+  align-self: center;
+  width: 60%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: large;
+  border: 3px solid black;
+  margin-top: -10px;
+  margin-bottom: 14px;
+  border-radius: 7px;
+  background-color: #DCDCDC;
+}
 
-
+input[id="searchbutton"] {
+  margin: auto;
+  align-self: center;
+  width: 15%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: large;
+  border: 3px solid black;
+  margin-top: -10px;
+  margin-bottom: 14px;
+  border-radius: 7px;
+  background-color: #DCDCDC;
+  
+}
 
 
 .tablelist {
@@ -151,7 +191,6 @@ table {
   margin: auto;
   width: 100%;
   border-collapse: collapse;
-  box-shadow: 8px 8px 16px 8px rgba(0,0,0,0.5);
 }
 
 .tableheader {
@@ -164,7 +203,7 @@ table {
 
 .tablesubhead {
   text-align: center;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   padding: 10px 20px;
   background-color: #696969;
@@ -174,17 +213,46 @@ table {
  td {
   text-align: center;
   color: black;
-  font-size: 14px;
+  font-size: 16px;
   padding: 15px 20px;
   background-color: #DCDCDC;
 }
 
+.bookinfo {
+  border-bottom: 2px double  #3d3b3b;
+  padding: 5px;
+  
+}
+
+.bookinfo:hover{
+  background-color: #a8a7a7;
+}
+
 .morebtn {
   cursor: pointer;
+  font-size: 16px;
+}
+.morebtn:hover {
+  background-color: #a8a7a7; 
+}
+
+.searchoptions {
+  
+}
+input[id="searchbutton"]:hover {
+  background-color: #a8a7a7;
 }
 
 
+/* td:hover {
+  /* Add a grey background color to the table header and on hover */
+  /* background-color: #a8a7a7; */
+/* } */ 
 
+
+.select-selected {
+  background-color: DodgerBlue;
+}
 
 
 
