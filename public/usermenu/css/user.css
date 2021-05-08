@@ -126,10 +126,15 @@ main {
   margin-top: 5em;
   margin-left: -2.0em;
   margin-right: -2.0em;
-  margin: auto;
-  width: 100%;
+  width: 104%;
   border-collapse: collapse;
   box-shadow: 8px 8px 16px 8px rgba(0,0,0,0.5);
+}
+
+
+.searchoptions {
+  align-content: center;
+  margin: auto;
 }
 
 
@@ -137,11 +142,7 @@ main {
 
 
 
-
-
-
 .tablelist {
-  margin-top: 5em;
   margin-left: -2.0em;
   margin-right: -2.0em;
 }
@@ -186,98 +187,7 @@ table {
 
 
 
-.container {
-  margin-top: 5em;
-  box-shadow: 8px 8px 16px 8px rgba(0,0,0,0.5);
-}
-
-.container > h1 {
-  background-color: black; 
-  padding-top: 8px;
-  padding-bottom: 8px;
-  font-size: 2.2em; 
-  font-weight: bold;
-}
-
-.formcontainer {
-  background-color: #DCDCDC;
-  padding-top: 10px;
-  padding-bottom: 20px;
-  margin-top: -24px;
-  color: black;
-
-}
-
-.data_form {
-  width: 95%;
-  padding-left: 30px;
-  text-align: left;
-}
-
-.data_form > label {
-  margin-bottom: 12px;
-}
-.data_form > input[type=text], input[type=password], input[type=email], input[type=name], input[type=number], input[type=date] {
-  width: 95%;
-  padding: 7px;
-  margin: 5px 0 22px 0;
-  font-size: 15px;
-  border-radius: 3px;
-  border: 1px solid black;
-}
-.data_form > input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=name]:focus, input[type=number]:focus, input[type=date]:focus {
-  border: 2px solid rgb(100, 149, 237);
-  outline: none;
-}
-
-.data_form > textarea {
-  width: 95%;
-  padding: 7px;
-  margin: 5px 0 22px 0;
-  font-size: 15px;
-  border-radius: 3px;
-  border: 1px solid black;
-  font-family: "NB International Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-align: left;
-}
-
-.data_form > textarea:focus {
-  border: 2px solid rgb(100, 149, 237);
-  outline: none;
-}
-
-.optioncontainer {
-  padding: 7px;
-  margin: 5px 0 22px 0;
-  font-size: 15px;
-}
-
-
-.bookinfocontainer {
-  background-color: #DCDCDC;
-  padding-top: 10px;
-  padding-bottom: 20px;
-  margin-top: -24px;
-  color: black;
-}
-
-.bookinfocontainer > p {
-  font-size: 18px;
-}
 
 
 
-.userrecordbtn {
-  box-shadow: 4px 6px 6px 8px rgba(0,0,0,0.5);
-  margin-top: 40px;
-  margin-left: 10px;
-  margin-right: 10px;
-  padding: 10px 20px;
-  font-size: 18px;
-  font-weight: bold;
-  color: white;
-  background-color: red ;
-  border: 1px solid red;
-  border-radius: 6px;
-  cursor: pointer;
-}
+
