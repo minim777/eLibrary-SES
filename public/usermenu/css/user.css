@@ -127,7 +127,7 @@ main {
   margin-top: 5em;
   margin-left: -2.0em;
   margin-right: -2.0em;
-  width: 103.9%;
+  width: 100;
   border-collapse: collapse;
   background-color: rgb(48, 46, 46); 
 }
@@ -189,7 +189,7 @@ input[id="searchbutton"] {
 
 table {
   margin: auto;
-  width: 100%;
+  width: 100%; 
   border-collapse: collapse;
 }
 
@@ -224,7 +224,7 @@ table {
   
 }
 
-.bookinfo:hover{
+#bookTable tr:hover{
   background-color: #a8a7a7;
 }
 
@@ -236,9 +236,6 @@ table {
   background-color: #a8a7a7; 
 }
 
-.searchoptions {
-  
-}
 input[id="searchbutton"]:hover {
   background-color: #a8a7a7;
 }
@@ -253,9 +250,4 @@ input[id="searchbutton"]:hover {
 .select-selected {
   background-color: DodgerBlue;
 }
-
-
-
-
-
 
