@@ -6,7 +6,63 @@
             <div class="pagecontainer">
                 <%- include('./partials/nav.ejs') %>
                 <main>
-                   
+                    <div class="specialhead">
+                        <h1 class="tableheader">Books currently in eLibrary</h1>
+                        <tr>
+                            <div class="searchoptions">
+                                <select id="searchby" name="filter" >
+                                <option selectDisabled>Select Filter</option>
+                                <option id="Title">Title</option>
+                                <option id="Author">Author</option>
+                                <option id="Genre">Category</option>
+                                <option id="Type">Type</option>
+                            </select>
+                                <input id="searchInput" type="text" placeholder="Search Books..." />
+                                <input id="searchbutton" type="submit" value="Search" onclick = "searchCommand();" /> 
+                            </div>
+                        </tr>
+                    </div>
+
+                      <div class="tablelist">   
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="tablesubhead" scope="col">Book ID</th>
+                                    <th class="tablesubhead" scope="col">Title</th>
+                                    <th class="tablesubhead" scope="col">Author(s)</th>
+                                    <th class="tablesubhead" scope="col">Type</th>
+                                    <th class="tablesubhead" scope="col">More</th>
+                                </tr>
+
+                            </thead>
+                            
+                    
+                                
+                            <!-- <div id="searchoptions">
+                              <select id="searchby" name="filter" >
+                                <option selectDisabled>Select Filter</option>
+                                <option id="Title">Title</option>
+                                <option id="Author">Author</option>
+                                <option id="Genre">Category</option>
+                                <option id="Type">Type</option>
+                              </select>
+                                    <input id="searchInput" type="text" placeholder="Search Books..." />
+                                    <input id="searchbutton" type="submit" value="Search" onclick = "searchCommand();" /> 
+                            </div>
+                       -->
+                            
+                            <tbody>
+                                <% booklist.forEach(book => {%>
+                                <tr>
+                                <td><%=book._id%></td>
+                                <td><%=book.Title%></td>
+                                <td><%=book.Author%></td>
+                                <td><%=book.Type%></td>
+                                <td><input type="button" value="More"/></td>
+                                </tr>
+                                <%})%>
+                            </tbody>
+                        </table>
                 </main>
                 <%- include('./partials/footer.ejs') %>
             </div>
