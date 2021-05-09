@@ -56,7 +56,9 @@
                                 <td><%=book.Author%></td>
                                 <td><%=book.Genre%></td>
                                 <td><%=book.Type%></td>
-                                <td><input type="button" value="More" class="morebtn"/></td>
+                                <td>
+                                    <input type="button" value="More" class="morebtn"/>
+                                    <input type="button" value="Borrow" class="borrowbtn" onclick="borrowBook();" /></td>
                                 </tr>
                                 <%})%>
                             </tbody>
@@ -72,6 +74,12 @@
                               table = document.getElementById("bookTable");
                               tr = table.getElementsByTagName("tr");
                               dropnum = document.getElementById("searchby").selectedIndex - 1;
+
+                            function borrowBook() {
+                                console.log("name jeff");
+                                        
+
+                            }
                                 
                   
                               // Loop through all table rows, and hide those who don't match the search query
