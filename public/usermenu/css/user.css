@@ -155,7 +155,7 @@ main {
 input[id="searchInput"] {
   margin: auto;
   align-self: center;
-  width: 60%;
+  width: 50%;
   padding-top: 10px;
   padding-bottom: 10px;
   font-size: large;
@@ -167,6 +167,21 @@ input[id="searchInput"] {
 }
 
 input[id="searchbutton"] {
+  margin: auto;
+  align-self: center;
+  width: 10%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: large;
+  border: 3px solid black;
+  margin-top: -10px;
+  margin-bottom: 14px;
+  border-radius: 7px;
+  background-color: #DCDCDC;
+  
+}
+
+input[id="resetbutton"] {
   margin: auto;
   align-self: center;
   width: 15%;
@@ -203,7 +218,7 @@ table {
 
 .tablesubhead {
   text-align: center;
-  font-size: 18px;
+  font-size: 21px;
   font-weight: bold;
   padding: 10px 20px;
   background-color: #696969;
@@ -213,7 +228,7 @@ table {
  td {
   text-align: center;
   color: black;
-  font-size: 16px;
+  font-size: 18px;
   padding: 15px 20px;
   background-color: #DCDCDC;
 }
@@ -240,6 +255,9 @@ input[id="searchbutton"]:hover {
   background-color: #a8a7a7;
 }
 
+.eachsearch{
+  font-size: 20px;
+}
 
 /* td:hover {
   /* Add a grey background color to the table header and on hover */

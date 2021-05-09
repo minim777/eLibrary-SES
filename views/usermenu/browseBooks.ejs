@@ -11,14 +11,15 @@
                         <tr>
                             <div class="searchoptions">
                                 <select id="searchby" required >
-                                <option value="" disabled selected>Select a Filter</option>
-                                <option id="Book ID">Book ID</option>
-                                <option id="Title">Title</option>
-                                <option id="Author">Author</option>
-                                <option id="Type">Type</option>
+                                <option class="eachsearch" value="" disabled selected>Select a Filter</option>
+                                <option class="eachsearch">Title</option>
+                                <option class="eachsearch">Author</option>
+                                <option class="eachsearch">Genre</option>
+                                <option class="eachsearch">Type</option>
                             </select>
                                 <input id="searchInput" type="text" placeholder="Search Books..." />
-                                <input id="searchbutton" type="submit" value="Search" onclick = "searchCommand();" /> 
+                                <input id="searchbutton" type="submit" value="Search" onclick = "searchCommand();" />
+                                <input id="resetbutton" type="submit" value="Reset Search Options" onclick="window.location.reload();"/>
                             </div>
                         </tr>
                     </div>
@@ -38,11 +39,11 @@
                         <table id="bookTable">
                             <thead>
                                 <tr>
-                                    <th class="tablesubhead" scope="col">Book ID</th>
-                                    <th class="tablesubhead" scope="col">Title</th>
-                                    <th class="tablesubhead" scope="col">Author(s)</th>
-                                    <th class="tablesubhead" scope="col">Type</th>
-                                    <th class="tablesubhead" scope="col">More</th>
+                                    <th class="tablesubhead" scope="col" width="30%">Title</th>
+                                    <th class="tablesubhead" scope="col" width="20%">Author(s)</th>
+                                    <th class="tablesubhead" scope="col" width="20%">Genre</th>
+                                    <th class="tablesubhead" scope="col" width="20%">Type</th>
+                                    <th class="tablesubhead" scope="col" width="10%">More Info</th>
                                 </tr>
 
                             </thead>
@@ -51,9 +52,9 @@
                             <tbody>
                                 <% booklist.forEach(book => {%>
                                 <tr class="bookinfo">
-                                <td><%=book._id%></td>
                                 <td><%=book.Title%></td>
                                 <td><%=book.Author%></td>
+                                <td><%=book.Genre%></td>
                                 <td><%=book.Type%></td>
                                 <td><input type="button" value="More" class="morebtn"/></td>
                                 </tr>
