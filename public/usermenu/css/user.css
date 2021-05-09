@@ -203,6 +203,7 @@ input[id="resetbutton"] {
 
 
 /* This is for the table */
+
 .tablelist {
   margin-left: -2.0em;
   margin-right: -2.0em;
@@ -228,7 +229,6 @@ table {
   font-weight: bold;
   padding: 10px 20px;
   background-color: #696969;
-  /* background-color: rgb(47, 79, 79); */
 }
 
  td {
@@ -245,9 +245,9 @@ table {
   
 }
 
-#bookTable tr:hover{
+/* #bookTable tr:hover{
   background-color: #a8a7a7;
-}
+} */
 
 .morebtn {
   cursor: pointer;
