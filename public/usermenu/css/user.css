@@ -2,10 +2,13 @@
 /* PAGE STRUCTURE CSS */
 body {
     font-family: "NB International Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background-image: url("../images/alumnigreen.jpg");
+    background: url("../images/alumnigreen.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover; 
+    -moz-background-size: cover; 
+    -o-background-size: cover; 
     background-size: cover;
-    background-repeat: repeat-y;
-    height: 100%;
+    /* background-repeat: repeat-y; */
+    /* height: 100%; */
 }
 
 .tint {
@@ -82,6 +85,7 @@ footer > p {
   position: absolute;
   background-color: rgb(105, 105, 105);
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  
   z-index: 1;
 }
 .dropdown-content a {
@@ -121,5 +125,153 @@ main {
 
 
 
+/* This is for the header and the div for the search option buttons and fields */
 
+.specialhead {
+  margin-top: 5em;
+  margin-left: -2.0em;
+  margin-right: -2.0em;
+  width: 100;
+  border-collapse: collapse;
+  background-color: rgb(48, 46, 46); 
+}
+
+/* This is for each individual search option div item */
+
+.searchoptions {
+  align-content: center;
+  margin: auto;
+}
+
+#searchby {
+  margin: auto;
+  align-self: center;
+  width: 20%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: large;
+  border: 3px solid black;
+  margin-top: -10px;
+  margin-bottom: 14px;
+  border-radius: 7px;
+  background-color: #DCDCDC;
+}
+
+input[id="searchInput"] {
+  margin: auto;
+  align-self: center;
+  width: 50%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: large;
+  border: 3px solid black;
+  margin-top: -10px;
+  margin-bottom: 14px;
+  border-radius: 7px;
+  background-color: #DCDCDC;
+}
+
+input[id="searchbutton"] {
+  margin: auto;
+  align-self: center;
+  width: 10%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: large;
+  border: 3px solid black;
+  margin-top: -10px;
+  margin-bottom: 14px;
+  border-radius: 7px;
+  background-color: #DCDCDC;
+  
+}
+
+input[id="resetbutton"] {
+  margin: auto;
+  align-self: center;
+  width: 10%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: large;
+  border: 3px solid black;
+  margin-top: -10px;
+  margin-bottom: 14px;
+  border-radius: 7px;
+  background-color: #DCDCDC;
+  
+}
+
+
+/* This is for the table */
+
+.tablelist {
+  margin-left: -2.0em;
+  margin-right: -2.0em;
+}
+
+table {
+  margin: auto;
+  width: 100%; 
+  border-collapse: collapse;
+}
+
+.tableheader {
+  text-align: center;
+  font-size: 2.2em;
+  font-weight: bold;
+  padding: 11px;
+  background-color: black;
+}
+
+.tablesubhead {
+  text-align: center;
+  font-size: 21px;
+  font-weight: bold;
+  padding: 10px 20px;
+  background-color: #696969;
+}
+
+ td {
+  text-align: center;
+  color: black;
+  font-size: 18px;
+  padding: 15px 20px;
+  background-color: #DCDCDC;
+}
+
+.bookinfo {
+  border-bottom: 2px double  #3d3b3b;
+  padding: 5px;
+  
+}
+
+/* #bookTable tr:hover{
+  background-color: #a8a7a7;
+} */
+
+.morebtn {
+  cursor: pointer;
+  font-size: 16px;
+}
+.morebtn:hover {
+  background-color: #a8a7a7; 
+}
+
+input[id="searchbutton"]:hover {
+  background-color: #a8a7a7;
+}
+
+.eachsearch{
+  font-size: 20px;
+}
+
+/* td:hover {
+  /* Add a grey background color to the table header and on hover */
+  /* background-color: #a8a7a7; */
+/* } */ 
+
+
+.select-selected {
+  background-color: DodgerBlue;
+}
 
