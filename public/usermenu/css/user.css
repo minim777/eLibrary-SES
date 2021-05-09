@@ -125,6 +125,7 @@ main {
 
 
 
+/* This is for the header and the div for the search option buttons and fields */
 
 .specialhead {
   margin-top: 5em;
@@ -135,6 +136,7 @@ main {
   background-color: rgb(48, 46, 46); 
 }
 
+/* This is for each individual search option div item */
 
 .searchoptions {
   align-content: center;
@@ -200,6 +202,7 @@ input[id="resetbutton"] {
 }
 
 
+/* This is for the table */
 .tablelist {
   margin-left: -2.0em;
   margin-right: -2.0em;
