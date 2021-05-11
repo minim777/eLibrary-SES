@@ -16,7 +16,7 @@ const menu_home = function(req, res){
 }
 
 const book_page = function(req, res){                       // work in progress
-    Book.findOne({}, function(err, book){
+    Book.find({}, function(err, book){
         if(err){
             console.log(err);
         }
