@@ -4,8 +4,7 @@ const router = express.Router();
 
 router.get('/usermenu', usermenuController.menu_home);
 
-router.get('/usermenu/borrow/:id', usermenuController.book_page);     // borrow book
-
+router.get('/adminmenu/books', adminmenuController.view_books);
 
 
 module.exports = router;
