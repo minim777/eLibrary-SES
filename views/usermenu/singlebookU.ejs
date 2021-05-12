@@ -7,12 +7,10 @@
                 <%- include('./partials/nav.ejs') %>
                 <main class="maincontent">
                     <script src="/jquery/jquery.min.js"></script>
-                    <script src="adminmenu/js/deletebook.js"></script>
                     <div class="container">
                         <h1><%= book.Title %></h1>
                         <div class="bookinfocontainer">
                             <div style="padding: 20px;">
-                                <p><b>Book ID: </b><%= book._id %></p>
                                 <p><b>Author: </b><%= book.Author %></p>
                                 <p><b>Type: </b><%= book.Type %></p>
                                 <p><b>Fiction/Non-fiction: </b><%= book.ForNF %></p>
@@ -24,8 +22,8 @@
                             </div>
                         </div>
                     </div>
-                    <input id="deletebookbtn" class="userrecordbtn" type="button" data-id="<%= book._id%>" value="Delete"/>
-                    <input class="userrecordbtn" type="button" onclick="window.location.href='/adminmenu/book/<%= book._id %>/update';" value="Update"/>
+                    <input id="backbtn" class="userrecordbtn" type="button" value="Back" onclick="window.location.href='/usermenu/'"/>
+                    <input class="userrecordbtn" type="button" value="Borrow"/>
                 </main>
                 <%- include('./partials/footer.ejs') %>
             </div>

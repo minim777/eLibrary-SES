@@ -15,7 +15,16 @@ const menu_home = function(req, res){
     });
 }
 
+const singlebook_getU = function(req, res){
+    Book.findById(req.params.id, function(err, book){
+        res.render('usermenu/singlebookU', {
+           title: "Single Book",
+           book: book
+         });
+       });
+}
 
 module.exports = {
     menu_home,
+    singlebook_getU
 }

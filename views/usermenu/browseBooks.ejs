@@ -57,8 +57,7 @@
                                 <td><%=book.Genre%></td>
                                 <td><%=book.Type%></td>
                                 <td>
-                                    <input type="button" value="More" class="morebtn"/>
-                                    <input type="button" value="Borrow" class="borrowbtn" onclick="borrowBook();" /></td>
+                                    <input type="button" value="More" class="morebtn" onclick="window.location.href='/usermenu/book/<%= book._id%>';"/>
                                 </tr>
                                 <%})%>
                             </tbody>
