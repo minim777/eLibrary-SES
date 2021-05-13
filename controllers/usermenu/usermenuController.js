@@ -37,10 +37,25 @@ const singlebook_getU = function(req, res){
            book: book
          });
        });
+} 
+
+const borrow_book = function(req, res){
+    Book.find({}, function(err, books){
+        if(err){
+            console.log(err);
+        }
+        else {
+            res.render('usermenu/borrowBooks', {
+                title: "Borrow available books",
+                booklist:books
+            });
+        }
+    });
 }
 
 module.exports = {
     menu_home,
     singlebook_getU,
-    browse_books
+    browse_books,
+    borrow_book
 }
