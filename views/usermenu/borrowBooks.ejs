@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html lang="en-AU">
+    <%- include('./partials/head.ejs')%> 
+    <body> 
+        <div class="tint">
+            <div class="pagecontainer"> 
+                <main> 
+                    <div class = "specialhead"> 
+                        <h1 class="tableheader">Available books to borrow</h1>
+                    </div>  
+
+                    <div class="tablelist">
+                        <table id="bookTable"> 
+                            <thead>
+                                <tr>
+                                    <th class="tablesubhead" scope="col" width="30%">Title</th> 
+                                    <th class="tablesubhead" scope="col" width="30%">Author(s)</th>
+                                    <th class="tablesubhead" scope="col" width="30%">Genre</th>
+                                    <th class="tablesubhead" scope="col" width="30%">Type</th>
+                                    <th class="tablesubhead" scope="col" width="30%">Borrow</th>
+                                </tr> 
+                                
+                            </thead> 
+
+                            <tbody>
+                                <% booklist.forEach(book => {%>
+                                <tr class="bookinfo">
+                                <td><%=book.Title%</td>
+                                <td><%=book.Author%></td> 
+                                <td><%=book.Genre%></td> 
+                                <td><%=book.Type%></td> 
+                                <td> 
+                                    <input type="button" value="Borrow" class="morebtn" onclick = "borrowCommand();"/> 
+                                </td> 
+                                <%})%> 
+                            </tbody> 
+                        </table>  
+                    </div> 
+                </main> 
+                <%- include('./partials/footer.ejs') %> 
+            </div> 
+        </div> 
+    </body> 
+</html>
+
+<script> //cannot figure this out will still try over weekend otherwise spoof
+    function borrowCommand(){
+        
+    } 
+</script>
+                        
+
