@@ -223,6 +223,15 @@ table {
   background-color: black;
 }
 
+.tableheader1 {
+  text-align: center;
+  font-size: 2.2em;
+  font-weight: bold;
+  padding: 11px;
+  background-color: black;
+  margin:0; 
+}
+
 .tablesubhead {
   text-align: center;
   font-size: 21px;
