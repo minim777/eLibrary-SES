@@ -136,6 +136,14 @@ main {
   background-color: rgb(48, 46, 46); 
 }
 
+.specialhead1 {
+  margin-left: -2.0em;
+  margin-right: -2.0em;
+  width: 100;
+  border-collapse: collapse;
+  background-color: rgb(48, 46, 46); 
+}
+
 /* This is for each individual search option div item */
 
 .searchoptions {

@@ -53,9 +53,24 @@ const return_books = function(req, res){
     });
 }
 
+const user_profile = function(req, res){
+    Book.find({}, function(err, books){
+        if(err){
+          console.log(err);
+        }
+        else {
+            res.render('usermenu/userProfile', {
+                title: "View Book List",
+                booklist: books
+            });
+        }
+    });
+}
+
 module.exports = {
     menu_home,
     singlebook_getU,
-browse_books,
-    return_books
+    browse_books,
+    return_books,
+    user_profile
 }

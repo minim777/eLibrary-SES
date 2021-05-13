@@ -9,5 +9,7 @@ router.get('/usermenu/book/:id', usermenuController.singlebook_getU);
 router.get('/usermenu/browseBooks', usermenuController.browse_books);
 
 router.get('/usermenu/returnBooks', usermenuController.return_books);
+
+router.get('/usermenu/userProfile', usermenuController.user_profile);
  
 module.exports = router;
