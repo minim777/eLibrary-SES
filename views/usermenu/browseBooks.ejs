@@ -6,7 +6,97 @@
             <div class="pagecontainer">
                 <%- include('./partials/nav.ejs') %>
                 <main>
-                   
+                    <div class="specialhead">
+                        <h1 class="tableheader">Books currently in eLibrary</h1>
+                        <tr>
+                            <div class="searchoptions">
+                                <select id="searchby" required >
+                                <option class="eachsearch" value="" disabled selected>Select a Filter</option>
+                                <option class="eachsearch">Title</option>
+                                <option class="eachsearch">Author</option>
+                                <option class="eachsearch">Genre</option>
+                                <option class="eachsearch">Type</option>
+                            </select>
+                                <input id="searchInput" type="text" placeholder="Search Books..." />
+                                <input id="searchbutton" type="submit" value="Search" onclick = "searchCommand();" />
+                                <input id="resetbutton" type="submit" value="Reset" onclick="window.location.reload();"/>
+                            </div>
+                        </tr>
+                    </div>
+                            <style>
+                                select:required:invalid {
+                                color: #666;
+                                }
+                                option[value=""][disabled] {
+                                display: none;
+                                }
+                                option {
+                                color: #000;
+                                }
+                            </style>
+                      
+                      <div class="tablelist">   
+                        <table id="bookTable">
+                            <thead>
+                                <tr>
+                                    <th class="tablesubhead" scope="col" width="30%">Title</th>
+                                    <th class="tablesubhead" scope="col" width="20%">Author(s)</th>
+                                    <th class="tablesubhead" scope="col" width="20%">Genre</th>
+                                    <th class="tablesubhead" scope="col" width="20%">Type</th>
+                                    <th class="tablesubhead" scope="col" width="10%">More Info</th>
+                                </tr>
+
+                            </thead>
+                            
+                            
+                            <tbody>
+                                <% booklist.forEach(book => {%>
+                                <tr class="bookinfo">
+                                <td><%=book.Title%></td>
+                                <td><%=book.Author%></td>
+                                <td><%=book.Genre%></td>
+                                <td><%=book.Type%></td>
+                                <td>
+                                    <input type="button" value="More" class="morebtn" onclick="window.location.href='/usermenu/book/<%= book._id%>';"/>
+                                </tr>
+                                <%})%>
+                            </tbody>
+                        </table>
+
+                        <script>
+                            function searchCommand() {
+                              // Declare variables
+                              console.log("this works"); 
+                              var input, filter, table, tr, td, i, txtValue, dropnum;
+                              input = document.getElementById("searchInput");
+                              filter = input.value.toUpperCase();
+                              table = document.getElementById("bookTable");
+                              tr = table.getElementsByTagName("tr");
+                              dropnum = document.getElementById("searchby").selectedIndex - 1;
+                                
+                  
+                              // Loop through all table rows, and hide those who don't match the search query
+                              for (i = 0; i < tr.length; i++) {
+                                td = tr[i].getElementsByTagName("td")[dropnum];
+                                if (td) {
+                                  txtValue = td.textContent || td.innerText;
+                                  if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                    tr[i].style.display = "";
+                                  } else {
+                                    tr[i].style.display = "none";
+                                  }
+                                }
+                              }
+                            }
+
+                            function borrowBook() {
+                                console.log("name jeff");
+                                // get book by id
+                                
+
+                            }
+                          </script>
+
                 </main>
                 <%- include('./partials/footer.ejs') %>
             </div>
