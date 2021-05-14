@@ -128,7 +128,7 @@ main {
 /* This is for the header and the div for the search option buttons and fields */
 
 .specialhead {
-  margin-top: 5em;
+  margin-top: 3em;
   margin-left: -2.0em;
   margin-right: -2.0em;
   width: 100;
@@ -146,13 +146,12 @@ main {
   
 }
 .specialhead2 {
-  margin-top: 5em;
+  /* margin-top: 5em; */
   margin-left: -2.0em;
   margin-right: -2.0em;
   width: 100;
   border-collapse: collapse;
   background-color: rgb(48, 46, 46);
-  margin-bottom: 0; 
 }
 
 .invis {
@@ -236,7 +235,9 @@ input[id="resetbutton"] {
 .tablelist {
   margin-left: -2.0em;
   margin-right: -2.0em;
+
 }
+
 
 table {
   margin: auto;
@@ -337,7 +338,7 @@ input[id="searchbutton"]:hover {
   background-color: #DCDCDC;
   padding-top: 2px;
   padding-bottom: 20px;
-  margin-top: -11%;
+  /* margin-top: -11%; */
   color: black;
 
 }
