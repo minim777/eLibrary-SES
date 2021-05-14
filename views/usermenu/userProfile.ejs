@@ -8,74 +8,78 @@
                 <main>
                     <div class="specialhead">
                         <h1 class="tableheader1">User Profile</h1>
-                    </div>
+                    
                       
-                    <div id="user-profile" class="specialhead1">
-                        <form class=form>
+                        <div id="user-profile" class="specialhead2">
+                            <div class="formcontainer">
+                                <form  class="data_form">
+                                    <p style="font-size: 1.3em; font-weight: bold; text-align: center;">
+                                    Change your password
+                                    </p>
+                                    
+                                    <hr>
+                                        <label for="Password">Enter current password </label><br>
+                                        <input type="password" name="Password" id="password" placeholder="Enter current password" required><br>
 
-                            <label for="Email">Enter your current email: </label><br>
-                            <input type="email" name="Email" id="email" placeholder="enter the user's email" required><br>
-
-                            <label for="newEmail">Enter a new email: </label><br>
-                            <input type="email" name="Email" id="email" placeholder="enter the user's email" required><br>
-
-                            <label for="Password">Enter current password: </label><br>
-                            <input type="password" name="Password" id="password" placeholder="Enter a password" required><br>
-                            
-                            <label for="newPassword">Enter new password: </label><br>
-                            <input type="password" name="Password" id="password" placeholder="Enter a password" required><br>
-
-                        </form>
-                      </div>
-
-                      <div class="tablelist">   
-                        <table id="bookTable">
-                            <thead>
-                                <tr>
-                                    <th class="tablesubhead" scope="col" width="30%">Title</th>
-                                    <th class="tablesubhead" scope="col" width="20%">Author(s)</th>
-                                    <th class="tablesubhead" scope="col" width="10%">Date Borrowed</th>
-                                    <th class="tablesubhead" scope="col" width="10%">Date Due</th>
-                                    <th class="tablesubhead" scope="col" width="15%">Extend Due Date</th>
-                                    <th class="tablesubhead" scope="col" width="10%">Return Book</th>
-                                </tr>
-
-                            </thead>
-                            
-                            <tbody>
+                                        <label for="Password">Enter new password: </label><br>
+                                        <input type="password" name="newPassword" id="newpassword" placeholder="Enter new password" required><br>
                                 
-                                <tr class="bookinfo">
-                                    <td>Clean Code: A Handbook of Agile Software Craftsmanship</td>
-                                    <td>Robert C. Martin</td>
-                                    <td>01/03/21</td>
-                                    <td>15/03/21</td>
-                                    <td> <input type="button" value="Extend" class="morebtn"/> </td>
-                                    <td> <input type="button" value="Return" class="morebtn"/> </td>
-                                </tr>
+                                        <input id="addrecordbtn" type="submit" value="Confirm Changes"/>
+                                    
+                                </form>
+                        </div>
+                    </div>
+                        <hr class="invis">
+                      
+                        <div class="tablelist">  
+                            <table id="bookTable">
+                                <thead>
+                                    <tr>
+                                        <th class="tablesubhead1" scope="col" width="30%">Title</th>
+                                        <th class="tablesubhead1" scope="col" width="20%">Author(s)</th>
+                                        <th class="tablesubhead1" scope="col" width="10%">Date Borrowed</th>
+                                        <th class="tablesubhead1" scope="col" width="10%">Date Due</th>
+                                        <th class="tablesubhead1" scope="col" width="15%">Extend Due Date</th>
+                                        <th class="tablesubhead1" scope="col" width="10%">Return Book</th>
+                                    </tr>
 
-                                <tr class="bookinfo">
-                                    <td>To Kill a Mockingbird</td>
-                                    <td>Harper Lee</td>
-                                    <td>13/04/21</td>
-                                    <td>27/4/21</td>
-                                    <td> <input type="button" value="Extend" class="morebtn"/> </td>
-                                    <td> <input type="button" value="Return" class="morebtn"/> </td>
-                                </tr>
+                                </thead>
+                                
+                                <tbody>
+                                    
+                                    <tr class="bookinfo">
+                                        <td>Clean Code: A Handbook of Agile Software Craftsmanship</td>
+                                        <td>Robert C. Martin</td>
+                                        <td>01/03/21</td>
+                                        <td>15/03/21</td>
+                                        <td> <input type="button" value="Extend" class="morebtn"/> </td>
+                                        <td> <input type="button" value="Return" class="morebtn"/> </td>
+                                    </tr>
 
-                                <tr class="bookinfo">
-                                    <td>Harry Potter and the Philosopher's Stone</td>
-                                    <td>J. K. Rowling</td>
-                                    <td>15/04/21</td>
-                                    <td>29/04/21</td>
-                                    <td> <input type="button" value="Extend" class="morebtn"/> </td>
-                                    <td> <input type="button" value="Return" class="morebtn"/> </td>
-                                </tr>
+                                    <tr class="bookinfo">
+                                        <td>To Kill a Mockingbird</td>
+                                        <td>Harper Lee</td>
+                                        <td>13/04/21</td>
+                                        <td>27/4/21</td>
+                                        <td> <input type="button" value="Extend" class="morebtn"/> </td>
+                                        <td> <input type="button" value="Return" class="morebtn"/> </td>
+                                    </tr>
+
+                                    <tr class="bookinfo">
+                                        <td>Harry Potter and the Philosopher's Stone</td>
+                                        <td>J. K. Rowling</td>
+                                        <td>15/04/21</td>
+                                        <td>29/04/21</td>
+                                        <td> <input type="button" value="Extend" class="morebtn"/> </td>
+                                        <td> <input type="button" value="Return" class="morebtn"/> </td>
+                                    </tr>
                             
                            
-                            </tbody>
+                                </tbody>
                         
-                        </table>
-
+                            </table>
+                        </div>
+                    </div>
                 </main>
                 <%- include('./partials/footer.ejs') %>
             </div>
