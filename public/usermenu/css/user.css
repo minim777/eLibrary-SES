@@ -128,7 +128,7 @@ main {
 /* This is for the header and the div for the search option buttons and fields */
 
 .specialhead {
-  margin-top: 5em;
+  margin-top: 3em;
   margin-left: -2.0em;
   margin-right: -2.0em;
   width: 100;
@@ -136,6 +136,34 @@ main {
   background-color: rgb(48, 46, 46); 
 }
 
+.specialhead1 {
+  margin-left: -2.0em;
+  margin-right: -2.0em;
+  width: 100;
+  border-collapse: collapse;
+  background-color: rgb(48, 46, 46); 
+  text-align-last: left;
+  
+}
+.specialhead2 {
+  /* margin-top: 5em; */
+  margin-left: -2.0em;
+  margin-right: -2.0em;
+  width: 100;
+  border-collapse: collapse;
+  background-color: rgb(48, 46, 46);
+}
+
+.invis {
+  visibility: hidden;
+}
+
+.pfhead {
+  font-size: 25px;
+  font-weight: bold;
+  align-self: center;
+  background-color:rgb(88, 87, 85);
+}
 /* This is for each individual search option div item */
 
 .searchoptions {
@@ -149,7 +177,7 @@ main {
   width: 20%;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-size: large;
+  font-size: 15px;
   border: 3px solid black;
   margin-top: -10px;
   margin-bottom: 14px;
@@ -163,7 +191,7 @@ input[id="searchInput"] {
   width: 50%;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-size: large;
+  font-size: 15px;
   border: 3px solid black;
   margin-top: -10px;
   margin-bottom: 14px;
@@ -177,7 +205,7 @@ input[id="searchbutton"] {
   width: 10%;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-size: large;
+  font-size: 15px;
   border: 3px solid black;
   margin-top: -10px;
   margin-bottom: 14px;
@@ -192,7 +220,7 @@ input[id="resetbutton"] {
   width: 10%;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-size: large;
+  font-size: 15px;
   border: 3px solid black;
   margin-top: -10px;
   margin-bottom: 14px;
@@ -207,7 +235,9 @@ input[id="resetbutton"] {
 .tablelist {
   margin-left: -2.0em;
   margin-right: -2.0em;
+
 }
+
 
 table {
   margin: auto;
@@ -223,21 +253,40 @@ table {
   background-color: black;
 }
 
+.tableheader1 {
+  text-align: center;
+  font-size: 2.2em;
+  font-weight: bold;
+  padding: 11px;
+  background-color: black;
+  margin:0; 
+}
+
 .tablesubhead {
   text-align: center;
-  font-size: 21px;
+  font-size: 16px;
   font-weight: bold;
   padding: 10px 20px;
   background-color: #696969;
 }
 
- td {
+.tablesubhead1 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  background-color: #696969;
+}
+
+td {
   text-align: center;
   color: black;
-  font-size: 18px;
+  font-size: 15px;
   padding: 15px 20px;
   background-color: #DCDCDC;
 }
+
+
 
 .bookinfo {
   border-bottom: 2px double  #3d3b3b;
@@ -245,9 +294,6 @@ table {
   
 }
 
-/* #bookTable tr:hover{
-  background-color: #a8a7a7;
-} */
 
 .morebtn {
   cursor: pointer;
@@ -262,7 +308,7 @@ input[id="searchbutton"]:hover {
 }
 
 .eachsearch{
-  font-size: 20px;
+  font-size: 15px;
 }
 
 /* td:hover {
@@ -290,9 +336,9 @@ input[id="searchbutton"]:hover {
 
 .formcontainer {
   background-color: #DCDCDC;
-  padding-top: 10px;
+  padding-top: 2px;
   padding-bottom: 20px;
-  margin-top: -24px;
+  /* margin-top: -11%; */
   color: black;
 
 }
