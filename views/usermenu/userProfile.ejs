@@ -19,17 +19,17 @@
                                     
                                     <hr>
                                         <label for="Password">Enter current password </label><br>
-                                        <input type="password" name="Password" id="password" placeholder="Enter current password" required><br>
+                                        <input type="password" name="Password" id="password" placeholder="Enter current password" required minlength="4" maxlength="10"><br>
 
                                         <label for="Password">Enter new password: </label><br>
-                                        <input type="password" name="newPassword" id="newpassword" placeholder="Enter new password" required><br>
+                                        <input type="password" name="newPassword" id="newpassword" placeholder="Enter new password" required required minlength="4" maxlength="10"><br>
                                 
-                                        <input id="addrecordbtn" type="submit" value="Confirm Changes"/>
+                                        <input id="addrecordbtn" type="submit" value="Confirm New Password"/>
                                     
                                 </form>
                             </div>
                         </div>
-                        <!-- <hr class="invis"> -->
+
                         <div class="specialhead">
                             <h1 class="tableheader1">User Borrow History</h1>
                         </div>
@@ -38,11 +38,12 @@
                                 <thead>
                                     <tr>
                                         <th class="tablesubhead1" scope="col" width="30%">Title</th>
-                                        <th class="tablesubhead1" scope="col" width="20%">Author(s)</th>
-                                        <th class="tablesubhead1" scope="col" width="10%">Date Borrowed</th>
+                                        <th class="tablesubhead1" scope="col" width="15%">Date Borrowed</th>
                                         <th class="tablesubhead1" scope="col" width="10%">Date Due</th>
-                                        <th class="tablesubhead1" scope="col" width="15%">Extend Due Date</th>
-                                        <th class="tablesubhead1" scope="col" width="10%">Return Book</th>
+                                        <th class="tablesubhead1" scope="col" width="10%">Status</th>
+                                        <th class="tablesubhead1" scope="col" width="10%">More Info</th>
+                                        <th class="tablesubhead1" scope="col" width="10%">Fines</th>
+                                        <th class="tablesubhead1" scope="col" width="10%">Request Invoice</th>
                                     </tr>
 
                                 </thead>
@@ -51,29 +52,32 @@
                                     
                                     <tr class="bookinfo">
                                         <td>Clean Code: A Handbook of Agile Software Craftsmanship</td>
-                                        <td>Robert C. Martin</td>
                                         <td>01/03/21</td>
                                         <td>15/03/21</td>
-                                        <td> <input type="button" value="Extend" class="morebtn"/> </td>
-                                        <td> <input type="button" value="Return" class="morebtn"/> </td>
+                                        <td>Borrowed</td>
+                                        <td> <input type="button" value="More" class="morebtn"/> </td>
+                                        <td> N/A </td>
+                                        <td> <input type="button" value="Request Invoice" class="morebtn"/> </td>
                                     </tr>
 
                                     <tr class="bookinfo">
                                         <td>To Kill a Mockingbird</td>
-                                        <td>Harper Lee</td>
                                         <td>13/04/21</td>
                                         <td>27/4/21</td>
-                                        <td> <input type="button" value="Extend" class="morebtn"/> </td>
-                                        <td> <input type="button" value="Return" class="morebtn"/> </td>
+                                        <td>Borrowed</td>
+                                        <td> <input type="button" value="More" class="morebtn"/> </td>
+                                        <td> N/A </td>
+                                        <td> <input type="button" value="Request Invoice" class="morebtn"/> </td>
                                     </tr>
 
                                     <tr class="bookinfo">
                                         <td>Harry Potter and the Philosopher's Stone</td>
-                                        <td>J. K. Rowling</td>
                                         <td>15/04/21</td>
                                         <td>29/04/21</td>
-                                        <td> <input type="button" value="Extend" class="morebtn"/> </td>
-                                        <td> <input type="button" value="Return" class="morebtn"/> </td>
+                                        <td>Borrowed</td>
+                                        <td> <input type="button" value="More" class="morebtn"/> </td>
+                                        <td> N/A </td>
+                                        <td> <input type="button" value="Request Invoice" class="morebtn"/> </td>
                                     </tr>
                             
                            
