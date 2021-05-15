@@ -18,7 +18,7 @@ const loginandregoRoutes = require('./routes/loginandregistration/loginandregoRo
 const usermenuRoutes =  require('./routes/usermenu/usermenuRoutes'); // routes
 
 // Connect to database
-const mongo = "mongodb+srv://deepak:mullumbimbo@2020@ses1a.kdj8l.mongodb.net/eLMS?retryWrites=true&w=majority"
+const mongo = "mongodb+srv://admin:admin@ses1a.kdj8l.mongodb.net/eLMS"
 mongoose.connect(mongo,{
   useNewUrlParser: true,
   useUnifiedTopology: true
