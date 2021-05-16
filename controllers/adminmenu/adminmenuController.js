@@ -1,5 +1,7 @@
+
 const User = require('../../models/usersmodel'); // import models
 const Book = require('../../models/booksmodel'); // import models
+const bcrypt = require('bcrypt');
 
 const menu_home = function(req, res){
     res.render('adminmenu/adminmenu', {
@@ -33,19 +35,27 @@ const adduser_post = function(req, res){
         Name: req.body.Name,
         Email: req.body.Email,
         Password: req.body.Password,
-        Type: req.body.Type, 
-        Registration_Date: req.body.Registration_Date
+        Type: req.body.Type
     });
+    
 
-    user.save(function(err){
-        if(err){
-            console.log(err);
-            return;
-        }
-        else {
-            req.flash('success', "User Added");
-            res.redirect('/adminmenu/users');
-        }
+    bcrypt.genSalt(10, function(err, salt) {
+        bcrypt.hash(user.Password, salt, function(err, hash){
+            if(err) throw error;
+            // set password to hashed 
+            user.Password = hash;
+            // save user
+            user.save(function(err){
+                if(err){
+                    console.log(err);
+                    return;
+                }
+                else {
+                    res.redirect('/adminmenu/users');
+                }
+            });
+
+        });
     });
 }
 
@@ -153,9 +163,9 @@ const updatebook_post = function(req, res){
         book.Blurb = req.body.Blurb; 
         book.availableCopies = req.body.availableCopies;
 
-    let query = {_id: req.params.id}
+     let query = {_id:req.params.id}
 
-    Book.updateOne(query, book, function(err){
+     Book.findByIdAndUpdate(query, book, function(err){
         if(err){
             console.log(err);
             return;
@@ -163,7 +173,7 @@ const updatebook_post = function(req, res){
         else {
             res.redirect('/adminmenu/books');
         }
-    });
+     });
 }
 
 

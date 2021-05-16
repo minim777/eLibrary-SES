@@ -2,7 +2,13 @@ var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
 
+
 var BookSchema = new Schema({
+    id: {
+       type: mongoose.Schema.Types.ObjectId,
+       required: true, 
+       unique: true
+    },
    Title: {
        type: String, 
        required: true

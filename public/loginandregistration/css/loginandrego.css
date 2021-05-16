@@ -83,7 +83,10 @@ body {
     width: 700px; 
     background: rgba(0, 0, 0, 0.8);
     box-shadow: 8px 8px 16px 8px rgba(0,0,0,0.5);
-    padding: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 30px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -140,4 +143,12 @@ body {
     font-size: 20px;
     padding-top: 15px;
     padding-bottom: 10px;
+}
+
+.regoform > a {
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 25%;
 }
