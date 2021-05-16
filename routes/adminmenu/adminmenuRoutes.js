@@ -14,12 +14,6 @@ router.get('/adminmenu/user/add', adminmenuController.adduser_get);
 // add a user to db route
 router.post('/adminmenu/user/add', adminmenuController.adduser_post);
 
-// view a single user's info Route
-router.get('/adminmenu/user/:id', adminmenuController.singleuser_get);
-
-// delete a single user Route 
-router.delete('/adminmenu/user/:id', adminmenuController.singleuser_delete);
-
 // ViewBooks Route
 router.get('/adminmenu/books', adminmenuController.view_books);
 
@@ -28,6 +22,15 @@ router.get('/adminmenu/book/add', adminmenuController.addbook_get);
 
 // add book to db route 
 router.post('/adminmenu/book/add', adminmenuController.addbook_post);
+
+// view a single user's info Route
+router.get('/adminmenu/user/:id', adminmenuController.singleuser_get);
+
+// delete a single user Route 
+router.delete('/adminmenu/user/:id', adminmenuController.singleuser_delete);
+
+// render form to update a single user's info Route 
+// router.get('/adminmenu/user/:id/update', adminmenuController.updateuser_get);
 
 // view a single book's info Route 
 router.get('/adminmenu/book/:id', adminmenuController.singlebook_get);

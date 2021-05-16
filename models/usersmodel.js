@@ -25,7 +25,7 @@ var UserSchema = new Schema({
    },  
    Registration_Date:{
      type: Date, 
-     required: true
+     default: Date.now
    }
 });
 
