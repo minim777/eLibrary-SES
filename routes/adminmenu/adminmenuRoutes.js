@@ -2,7 +2,7 @@ const express = require('express');
 const adminmenuController = require('../../controllers/adminmenu/adminmenuController');
 const router = express.Router();
 
-// Home Route 
+// Home Route
 router.get('/adminmenu', adminmenuController.menu_home);
 
 // ViewUsers Route
@@ -17,31 +17,34 @@ router.post('/adminmenu/user/add', adminmenuController.adduser_post);
 // ViewBooks Route
 router.get('/adminmenu/books', adminmenuController.view_books);
 
-// render add book form route 
+// render add book form route
 router.get('/adminmenu/book/add', adminmenuController.addbook_get);
 
-// add book to db route 
+// add book to db route
 router.post('/adminmenu/book/add', adminmenuController.addbook_post);
+
+// loan history route
+router.get('/adminmenu/loanhistory', adminmenuController.loanhistory_get);
 
 // view a single user's info Route
 router.get('/adminmenu/user/:id', adminmenuController.singleuser_get);
 
-// delete a single user Route 
+// delete a single user Route
 router.delete('/adminmenu/user/:id', adminmenuController.singleuser_delete);
 
-// render form to update a single user's info Route 
+// render form to update a single user's info Route
 // router.get('/adminmenu/user/:id/update', adminmenuController.updateuser_get);
 
-// view a single book's info Route 
+// view a single book's info Route
 router.get('/adminmenu/book/:id', adminmenuController.singlebook_get);
 
-// delete a single book Route 
+// delete a single book Route
 router.delete('/adminmenu/book/:id', adminmenuController.singlebook_delete);
 
-// render form to update a single book's info Route 
+// render form to update a single book's info Route
 router.get('/adminmenu/book/:id/update', adminmenuController.updatebook_get);
 
-//  update a single book's info Route 
+//  update a single book's info Route
 router.post('/adminmenu/book/:id/update', adminmenuController.updatebook_post);
 
 

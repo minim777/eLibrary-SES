@@ -37,12 +37,12 @@ const adduser_post = function(req, res){
         Password: req.body.Password,
         Type: req.body.Type
     });
-    
+
 
     bcrypt.genSalt(10, function(err, salt) {
         bcrypt.hash(user.Password, salt, function(err, hash){
             if(err) throw error;
-            // set password to hashed 
+            // set password to hashed
             user.Password = hash;
             // save user
             user.save(function(err){
@@ -76,7 +76,7 @@ const singleuser_delete = function(req, res){
         if(err){
             console.log(err);
         }
-        res.send('Success'); 
+        res.send('Success');
     });
 }
 
@@ -107,9 +107,9 @@ const addbook_post = function(req, res){
         Title: req.body.Title,
         Author: req.body.Author,
         Type: req.body.Type,
-        ForNF: req.body.ForNF, 
+        ForNF: req.body.ForNF,
         Genre: req.body.Genre,
-        Blurb: req.body.Blurb, 
+        Blurb: req.body.Blurb,
         availableCopies: req.body.availableCopies
     });
 
@@ -140,7 +140,7 @@ const singlebook_delete = function(req, res){
         if(err){
             console.log(err);
         }
-        res.send('Success'); 
+        res.send('Success');
     });
 }
 
@@ -160,7 +160,7 @@ const updatebook_post = function(req, res){
         book.Type = req.body.Type;
         book.ForNF = req.body.ForNF;
         book.Genre = req.body.Genre;
-        book.Blurb = req.body.Blurb; 
+        book.Blurb = req.body.Blurb;
         book.availableCopies = req.body.availableCopies;
 
      let query = {_id:req.params.id}
@@ -176,6 +176,12 @@ const updatebook_post = function(req, res){
      });
 }
 
+const loanhistory_get = function(req, res){
+  res.render('adminmenu/loanhistory', {
+     title: "Library Loan History"
+  });
+}
+
 
 module.exports = {
     menu_home,
@@ -183,12 +189,13 @@ module.exports = {
     adduser_get,
     adduser_post,
     singleuser_get,
-    singleuser_delete, 
-    view_books, 
-    addbook_get, 
-    addbook_post, 
-    singlebook_get, 
-    singlebook_delete, 
+    singleuser_delete,
+    view_books,
+    addbook_get,
+    addbook_post,
+    singlebook_get,
+    singlebook_delete,
     updatebook_get,
-    updatebook_post 
+    updatebook_post,
+    loanhistory_get
 }
